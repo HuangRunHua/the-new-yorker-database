@@ -8,14 +8,14 @@ An article is structed with the following `JSON` format.
 ```json
 {
   "coverImageURL": "THE URL OF ARTICLE COVER IMAGE",
-  // THE ASPECTRATIO OF COVER IMAGE, USUALLY A DOUBLE VALUE,
-  "coverImageAspectRatio": 442.5/688,
+  "coverImageWidth": 442.5,
+  "coverImageHeight": 688,
   "coverImageDescription": "THE DESCRIPTION OF COVER IMAGE",
   "title": "THE TITLE OF THE ARTICLE",
   "subtitle": "THE SUBTITLE OF THE ARTICLE",
   "hashTag": "THE TAG OF THIS ARTICLE",
-  "authorProfileURL": "THE IMAGE URL OF AUTHOR PROFILE",
   "authorName":"THE AUTHOR'S NAME",
+  "publishDate": "THE DATE OF ARTICLE IS PUBLISHED"
   "contents": [
     {
       "role": "body",
@@ -24,8 +24,9 @@ An article is structed with the following `JSON` format.
     {
       "role": "image",
       "imageURL": "THE URL OF CONTENT'S IMAGE THAT WILL BE INSERTED INSIDE AN ARTICLE",
-      // THE ASPECTRATIO OF IMAGE, USUALLY A DOUBLE VALUE
-      "imageAspectRatio": 295.88/251.67,
+      "imageWidth": 295.88,
+      "imageHeight": 251.67,
+      "imageDescription": "THE DESCRIPTION OF IMAGE",
     },
     {
       "role": "quote",
