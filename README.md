@@ -3,7 +3,7 @@ The New Yorker article database which is stored with JSON format is uses for the
 
 ### Article Structure
 
-An article is structed with the following `JSON` format. 
+An `Article` is structed with the following `JSON` format. 
 
 ```json
 {
@@ -34,6 +34,16 @@ An article is structed with the following `JSON` format.
     }
     ...
   ]
+}
+```
+
+### Magazine Structure
+
+A `Magazine` contains multiple `Article` structures and some other data and is stored in `JOSN` format.
+
+```json
+{
+  
 }
 ```
 
