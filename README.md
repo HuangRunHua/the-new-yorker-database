@@ -64,3 +64,16 @@ A `Magazine` contains multiple `Article` structures and some other data and is s
 
 The `Database` contains all the magazines that are stored in the server. The structure of `Database` is also `JSON` style format.
 
+```json
+[
+  {
+    "id": 0,
+    "magazineURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_09_26/2022_09_26.json"
+  },
+  {
+    "id": 1,
+    "magazineURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/2022_10_03.json"
+  }
+]
+```
+
