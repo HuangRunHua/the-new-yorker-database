@@ -60,5 +60,7 @@ A `Magazine` contains multiple `Article` structures and some other data and is s
 }
 ```
 
+### Database Structure
 
+The `Database` contains all the magazines that are stored in the server. The structure of `Database` is also `JSON` style format.
 

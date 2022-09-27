@@ -1,0 +1,16 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "date": "Oct 3rh 2022",
+  "coverStory": "Mark Ulriksen’s “All Rise!”",
+  "coverImageWidth": 555,
+  "coverImageHeight": 688,
+  "coverImageURL": "https://media.newyorker.com/photos/632de17e882c6ff52b2d3b1f/master/w_380,c_limit/2022_10_03.jpg",
+  "articles": [
+    {
+      "articleURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/the-shock-and-aftershocks-of-the-waste-land/article.json"
+    },
+    {
+      "articleURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/how-to-recover-from-a-happy-childhood.json"
+    }
+  ]
+}
