@@ -78,7 +78,7 @@
     {
       "imageWidth": 695,
       "role": "image",
-      "imageURL": "https://media.newyorker.com/cartoons/632cc48d882c6ff52b2d3981/master/w_1600,c_limit/221003_a26955.jpg",
+      "imageURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/the-shock-and-aftershocks-of-the-waste-land/images/2.png",
       "imageDescription": "“I’m going to wind down with a glass of wine and a few e-mails.”",
       "imageHeight": 591.15999999999997
     },
@@ -212,7 +212,7 @@
     },
     {
       "imageWidth": 695,
-      "imageURL": "https://media.newyorker.com/cartoons/632cc48d1dc08bd0ff3e3509/master/w_960,c_limit/221003_a25039.jpg",
+      "imageURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/the-shock-and-aftershocks-of-the-waste-land/images/3.png",
       "role": "image",
       "imageHeight": 529.19000000000005
     },
@@ -304,7 +304,7 @@
   "authorName": "Anthony Lane",
   "coverImageHeight": 688,
   "hashTag": "Life and Letters",
-  "coverImageURL": "https://media.newyorker.com/photos/632cc48d1dc08bd0ff3e350a/master/w_2240,c_limit/221003_r41096.jpg",
+  "coverImageURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/the-shock-and-aftershocks-of-the-waste-land/images/1.png",
   "coverImageWidth": 442.5,
   "publishDate": "Sep 26th, 2022",
 }
