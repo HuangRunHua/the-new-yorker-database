@@ -7,12 +7,15 @@
   "coverImageURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/2022_10_03.png",
   "articles": [
     {
+        "id": 0,
       "articleURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/the-shock-and-aftershocks-of-the-waste-land/article.json"
     },
     {
+        "id": 1,
       "articleURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/how-to-recover-from-a-happy-childhood/article.json"
     },
     {
+        "id": 2,
       "articleURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/did-a-nobel-peace-laureate-stoke-a-civil-war/article.json"
     }
   ]
