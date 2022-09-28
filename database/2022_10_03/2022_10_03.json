@@ -17,6 +17,10 @@
     {
         "id": 2,
       "articleURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/did-a-nobel-peace-laureate-stoke-a-civil-war/article.json"
+    },
+    {
+        "id": 3,
+      "articleURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/solomun-the-dj-who-keeps-ibiza-dancing/article.json"
     }
   ]
 }
