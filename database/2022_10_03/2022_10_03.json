@@ -21,6 +21,14 @@
     {
         "id": 3,
       "articleURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/solomun-the-dj-who-keeps-ibiza-dancing/article.json"
+    },
+    {
+        "id": 4,
+      "articleURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/the-troublesome-legacy-of-the-early-romantics-andrea-wulf-magnificent-rebels/article.json"
+    },
+    {
+        "id": 5,
+      "articleURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/sacred-nature-lady-justice-the-english-understand-wool-and-poukahangatus/article.json"
     }
   ]
 }
