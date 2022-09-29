@@ -29,6 +29,10 @@
     {
         "id": 5,
       "articleURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/sacred-nature-lady-justice-the-english-understand-wool-and-poukahangatus/article.json"
+    },
+    {
+        "id": 6,
+      "articleURL": "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/2022_10_03/the-mysteries-of-mondrian-hans-janssen-piet-mondrian-a-life/article.json"
     }
   ]
 }
