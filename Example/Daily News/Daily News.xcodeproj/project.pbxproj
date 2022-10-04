@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90F852728E3424900DDA5E0 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90F852628E3424900DDA5E0 /* Database.swift */; };
+		A90F852A28E3463C00DDA5E0 /* MagazineList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90F852928E3463C00DDA5E0 /* MagazineList.swift */; };
+		A90F852C28E350CD00DDA5E0 /* MagazineCoverRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90F852B28E350CD00DDA5E0 /* MagazineCoverRow.swift */; };
+		A90F852E28E3580300DDA5E0 /* ArticleConetntsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90F852D28E3580300DDA5E0 /* ArticleConetntsList.swift */; };
+		A90F853128E3622000DDA5E0 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90F853028E3622000DDA5E0 /* ColorExtensions.swift */; };
+		A90F853328E3F0D100DDA5E0 /* ArticleContentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90F853228E3F0D100DDA5E0 /* ArticleContentRow.swift */; };
 		A9291BE928E2C328007F5F77 /* article.json in Resources */ = {isa = PBXBuildFile; fileRef = A9291BE828E2C328007F5F77 /* article.json */; };
 		A9291BF428E301F3007F5F77 /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9291BF328E301F3007F5F77 /* TranslationView.swift */; };
 		A93DFF1528E1F59400FC5BAE /* Daily_NewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DFF1428E1F59400FC5BAE /* Daily_NewsApp.swift */; };
-		A93DFF1728E1F59400FC5BAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DFF1628E1F59400FC5BAE /* ContentView.swift */; };
+		A93DFF1728E1F59400FC5BAE /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DFF1628E1F59400FC5BAE /* ArticleView.swift */; };
 		A93DFF1928E1F59400FC5BAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93DFF1828E1F59400FC5BAE /* Assets.xcassets */; };
 		A93DFF1D28E1F59400FC5BAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93DFF1C28E1F59400FC5BAE /* Preview Assets.xcassets */; };
 		A93DFF2728E1F5CF00FC5BAE /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DFF2628E1F5CF00FC5BAE /* Article.swift */; };
@@ -19,11 +25,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A90F852628E3424900DDA5E0 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		A90F852928E3463C00DDA5E0 /* MagazineList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineList.swift; sourceTree = "<group>"; };
+		A90F852B28E350CD00DDA5E0 /* MagazineCoverRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineCoverRow.swift; sourceTree = "<group>"; };
+		A90F852D28E3580300DDA5E0 /* ArticleConetntsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleConetntsList.swift; sourceTree = "<group>"; };
+		A90F853028E3622000DDA5E0 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		A90F853228E3F0D100DDA5E0 /* ArticleContentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleContentRow.swift; sourceTree = "<group>"; };
 		A9291BE828E2C328007F5F77 /* article.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = article.json; sourceTree = "<group>"; };
 		A9291BF328E301F3007F5F77 /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 		A93DFF1128E1F59400FC5BAE /* Daily News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93DFF1428E1F59400FC5BAE /* Daily_NewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_NewsApp.swift; sourceTree = "<group>"; };
-		A93DFF1628E1F59400FC5BAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A93DFF1628E1F59400FC5BAE /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		A93DFF1828E1F59400FC5BAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A93DFF1A28E1F59400FC5BAE /* Daily_News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Daily_News.entitlements; sourceTree = "<group>"; };
 		A93DFF1C28E1F59400FC5BAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -43,6 +55,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A90F852828E3462A00DDA5E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A90F852928E3463C00DDA5E0 /* MagazineList.swift */,
+				A90F852B28E350CD00DDA5E0 /* MagazineCoverRow.swift */,
+				A90F852D28E3580300DDA5E0 /* ArticleConetntsList.swift */,
+				A90F853228E3F0D100DDA5E0 /* ArticleContentRow.swift */,
+				A93DFF1628E1F59400FC5BAE /* ArticleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A90F852F28E3621400DDA5E0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A90F853028E3622000DDA5E0 /* ColorExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A93DFF0828E1F59300FC5BAE = {
 			isa = PBXGroup;
 			children = (
@@ -64,8 +96,9 @@
 			children = (
 				A93DFF1428E1F59400FC5BAE /* Daily_NewsApp.swift */,
 				A93DFF2528E1F5C100FC5BAE /* Model */,
-				A93DFF1628E1F59400FC5BAE /* ContentView.swift */,
+				A90F852828E3462A00DDA5E0 /* Views */,
 				A9291BF328E301F3007F5F77 /* TranslationView.swift */,
+				A90F852F28E3621400DDA5E0 /* Extensions */,
 				A9291BE828E2C328007F5F77 /* article.json */,
 				A93DFF1828E1F59400FC5BAE /* Assets.xcassets */,
 				A93DFF1A28E1F59400FC5BAE /* Daily_News.entitlements */,
@@ -86,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				A93DFF2628E1F5CF00FC5BAE /* Article.swift */,
+				A90F852628E3424900DDA5E0 /* Database.swift */,
 				A93DFF2828E1F62A00FC5BAE /* Contents.swift */,
 				A93DFF2A28E1F6DD00FC5BAE /* ModelData.swift */,
 			);
@@ -167,11 +201,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A90F853128E3622000DDA5E0 /* ColorExtensions.swift in Sources */,
 				A9291BF428E301F3007F5F77 /* TranslationView.swift in Sources */,
-				A93DFF1728E1F59400FC5BAE /* ContentView.swift in Sources */,
+				A93DFF1728E1F59400FC5BAE /* ArticleView.swift in Sources */,
 				A93DFF2B28E1F6DD00FC5BAE /* ModelData.swift in Sources */,
 				A93DFF1528E1F59400FC5BAE /* Daily_NewsApp.swift in Sources */,
+				A90F853328E3F0D100DDA5E0 /* ArticleContentRow.swift in Sources */,
 				A93DFF2728E1F5CF00FC5BAE /* Article.swift in Sources */,
+				A90F852A28E3463C00DDA5E0 /* MagazineList.swift in Sources */,
+				A90F852E28E3580300DDA5E0 /* ArticleConetntsList.swift in Sources */,
+				A90F852C28E350CD00DDA5E0 /* MagazineCoverRow.swift in Sources */,
+				A90F852728E3424900DDA5E0 /* Database.swift in Sources */,
 				A93DFF2928E1F62A00FC5BAE /* Contents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -281,6 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -294,12 +336,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Daily News/Daily_News.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Daily News/Preview Content\"";
 				DEVELOPMENT_TEAM = YRB62S584T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "纽约客";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.magazines-and-newspapers";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -308,17 +353,19 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Daily-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -331,12 +378,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Daily News/Daily_News.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Daily News/Preview Content\"";
 				DEVELOPMENT_TEAM = YRB62S584T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "纽约客";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.magazines-and-newspapers";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -345,17 +395,19 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Daily-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

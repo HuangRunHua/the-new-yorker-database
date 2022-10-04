@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 public extension View {
     /// Presents an activity sheet when the associated `ActivityItem` is present
     ///
@@ -15,11 +16,14 @@ public extension View {
     /// - Parameters:
     ///   - text: Content to be translated
     ///   - onComplete: When the sheet is dismissed, the this will be called with the result
+    #if !os(macOS)
     func translateSheet(_ text: Binding<String?>, onComplete: UIActivityViewController.CompletionWithItemsHandler? = nil) -> some View {
         background(TranslateView(text: text, onComplete: onComplete))
     }
+    #endif
 }
 
+#if !os(macOS)
 private struct TranslateView: UIViewControllerRepresentable {
     @Binding var text: String?
     private var completion: UIActivityViewController.CompletionWithItemsHandler?
@@ -85,4 +89,4 @@ private final class TranslateViewControllerWrapper: UIViewController {
         }
     }
 }
-
+#endif

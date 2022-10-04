@@ -77,3 +77,10 @@ The `Database` contains all the magazines that are stored in the server. The str
 ]
 ```
 
+### Example
+
+The attached `example` folder contains the code level example of how to fetch the `JSON` data and form a news app according to the data format mentioned above.
+
+### Last but not least
+
+This repository will no longer be updated. Feel free to fork it for your own purpose.

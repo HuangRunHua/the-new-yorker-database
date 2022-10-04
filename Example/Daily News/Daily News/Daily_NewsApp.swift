@@ -13,7 +13,7 @@ struct Daily_NewsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MagazineList()
                 .environmentObject(modelData)
         }
     }
