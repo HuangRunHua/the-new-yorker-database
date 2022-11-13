@@ -13,7 +13,7 @@ class MagazineJSON(object):
         self.__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
         self.__folder = folder
         self.magazine_dict = {}
-        self.database_url = "https://github.com/HuangRunHua/the-new-yorker-database/tree/raw/main/database/" + self.__folder
+        self.database_url = "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/" + self.__folder + "/eposide"
 
     def generator_magazine_json(self, coverStory: str, date: str, coverImageURL: str, id: str):
         self.magazine_dict["coverStory"] = coverStory
@@ -29,6 +29,8 @@ class MagazineJSON(object):
         for article_name in article_names:
             article_dict = {}
             article_dict["id"] = index
+
+            # https://github.com/HuangRunHua/the-new-yorker-database/blob/main/database/2022-11-14/eposide/the-case-against-the-twitter-apology-matthew-ichihashi-potts-forgiveness-danya-ruttenberg-on-repentance-and-repair.json
             article_dict["articleURL"] = self.database_url + "/" + article_name
             self.magazine_dict["articles"].append(article_dict)
             index += 1
