@@ -31,8 +31,10 @@ class MagazineJSON(object):
             article_dict["id"] = index
             article_dict["articleURL"] = self.database_url + "/" + article_name
             self.magazine_dict["articles"].append(article_dict)
+            index += 1
 
-        print(self.magazine_dict)
+        with open(self.__location__ + '/' + self.__folder + "/" + self.__folder + ".json", "w") as outfile:
+            json.dump(self.magazine_dict, outfile)
 
     def __get_article_names(self) -> list[str]:
         """
