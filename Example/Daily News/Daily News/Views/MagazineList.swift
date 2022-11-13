@@ -31,34 +31,21 @@ struct MagazineList: View {
     private let thumbnailCornerRadius: CGFloat = 5
     
     var body: some View {
-        TabView {
-            NavigationView {
-                Text("News+")
-                    .navigationTitle("News+")
-            }
-            .tabItem {
-                    Label("Today", systemImage: "list.dash")
+        ZStack {
+            if let selectedArticle = self.modelData.selectedArticle {
+                ZStack(alignment: .bottomTrailing) {
+                    ArticleView(currentArticle: selectedArticle)
+                        .environmentObject(modelData)
+                    self.coverThumbnail
                 }
-            
-            
-            ZStack {
-                if let selectedArticle = self.modelData.selectedArticle {
-                    ZStack(alignment: .bottomTrailing) {
-                        ArticleView(currentArticle: selectedArticle)
+                .sheet(isPresented: $showMagazineContents) {
+                    if let selectedmagazine = self.modelData.selectedMagazine {
+                        ArticleConetntsList(magazine: selectedmagazine)
                             .environmentObject(modelData)
-                        self.coverThumbnail
                     }
-                    .sheet(isPresented: $showMagazineContents) {
-                        if let selectedmagazine = self.modelData.selectedMagazine {
-                            ArticleConetntsList(magazine: selectedmagazine)
-                                .environmentObject(modelData)
-                        }
-                    }
-                } else {
-                    self.magazineList
                 }
-            }.tabItem {
-                Label("Magazine", systemImage: "doc.richtext")
+            } else {
+                self.magazineList
             }
         }
     }
