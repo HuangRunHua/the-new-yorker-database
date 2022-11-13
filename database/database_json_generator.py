@@ -11,12 +11,20 @@ class DatabaseJSON(object):
             - folder: 单期杂志所在的文件夹名称
         """
         self.__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__))) 
-        self.database_dict = {}
+        self.database_dict = []
         self.database_url = "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/"
 
     def generator_magazine_json(self, coverStory: str, date: str, coverImageURL: str, id: str):
         eposide_names = self.__get_eposide_names()
-        print(eposide_names)
+        index = 1
+        for eposide_name in eposide_names:
+            eposide_dict = {}
+            eposide_dict["id"] = index
+            eposide_dict["magazineURL"] = self.database_url + eposide_name + "/" + eposide_name + ".json"
+            self.database_dict.append(eposide_dict)
+        print(self.database_dict)
+        
+
         
 
     def __get_eposide_names(self) -> list[str]:
@@ -26,7 +34,11 @@ class DatabaseJSON(object):
         """
         """Read files' name and stored in a str list"""
         absolute_folder_path = os.path.join(self.__location__, "*")
-        eposide_names = [absolute_path.split("/")[-1] for absolute_path in glob.glob(absolute_folder_path)]
+        eposide_names = [
+            absolute_path.split("/")[-1] 
+            for absolute_path in glob.glob(absolute_folder_path)
+            if (not "." in absolute_path.split("/")[-1]) and (absolute_path.split("/")[-1][0:2] != "__")
+        ]
         return eposide_names
 
 if __name__ == "__main__":
