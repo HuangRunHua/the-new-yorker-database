@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MagazineList: View {
     
-    private let databaseURL: String = "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/database.plist"
+    private let databaseURL: String = "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/database.json"
     
     @EnvironmentObject var modelData: ModelData
     

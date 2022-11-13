@@ -13,7 +13,7 @@ class MagazineJSON(object):
         self.__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
         self.__folder = folder
         self.magazine_dict = {}
-        self.database_url = "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/" + self.__folder
+        self.database_url = "https://github.com/HuangRunHua/the-new-yorker-database/tree/raw/main/database/" + self.__folder
 
     def generator_magazine_json(self, coverStory: str, date: str, coverImageURL: str, id: str):
         self.magazine_dict["coverStory"] = coverStory
