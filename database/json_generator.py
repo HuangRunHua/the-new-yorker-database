@@ -66,6 +66,7 @@ class MagazineGenerator(object):
                 image_description, image_url = self.__parse_image(content=content)
                 parsed_content["role"] = "image"
                 parsed_content["imageURL"] = image_url
+                print(image_url)
                 image_size = ImageAnalyzer.get_image_size(url=image_url)
                 parsed_content["imageWidth"] = image_size[0]
                 parsed_content["imageHeight"] = image_size[1]
