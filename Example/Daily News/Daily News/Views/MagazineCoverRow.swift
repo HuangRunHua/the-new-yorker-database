@@ -32,7 +32,8 @@ struct MagazineCoverRow: View {
                 }
             }
             .cornerRadius(7)
-            .padding(.bottom)
+            .shadow(radius: 7)
+            .padding([.top, .bottom])
             HStack {
                 Image(systemName: "cloud.fill")
                     .resizable()
@@ -57,6 +58,7 @@ struct MagazineCoverRow: View {
                 .layoutPriority(1)
 
             }
+//            .padding([.leading, .trailing])
         }
     }
 }
