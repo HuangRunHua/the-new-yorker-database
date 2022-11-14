@@ -16,8 +16,8 @@ final class ModelData: ObservableObject, Decodable {
     @Published var article: Article?
     @Published var selectedMagazine: Magazine?
     @Published var selectedArticle: Article?
-    @Published var latestMagazineURL: LatestMagazineURL?
-    @Published var latestMagazine: Magazine?
+    @Published var latestMagazineURL: [LatestMagazineURL] = []
+    @Published var latestMagazine: [Magazine] = []
     @Published var latestArticles: [Article] = []
     
     enum CodingKeys: CodingKey {
@@ -32,7 +32,7 @@ final class ModelData: ObservableObject, Decodable {
         magazineURLs = try value.decode([MagazineURL].self, forKey: .magazineURLs)
         magazines = try value.decode([Magazine].self, forKey: .magazines)
         articles = try value.decode([Article].self, forKey: .articles)
-        latestMagazineURL = try value.decode(LatestMagazineURL.self, forKey: .latestMagazineURL)
+        latestMagazineURL = try value.decode([LatestMagazineURL].self, forKey: .latestMagazineURL)
     }
     
     init() {}
@@ -45,6 +45,7 @@ final class ModelData: ObservableObject, Decodable {
         let request = URLRequest(url: databaseURL)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
             if let error = error {
+                print("999.")
                 print(error)
                 return
             }
@@ -62,16 +63,16 @@ final class ModelData: ObservableObject, Decodable {
         guard let databaseURL = URL(string: urlString) else {
             return
         }
-        
         let request = URLRequest(url: databaseURL)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
             if let error = error {
+                print("998.")
                 print(error)
                 return
             }
             if let data = data {
                 DispatchQueue.main.async {
-                    self.magazineURLs = self._parseJsonData(data: data)
+                    self.latestMagazineURL = self._parseLatestMagazineJsonData(data: data)
                 }
             }
         }
@@ -86,6 +87,15 @@ final class ModelData: ObservableObject, Decodable {
         self.magazines = self.magazines.sorted(by: { $0.id > $1.id })
     }
     
+    func fetchLatestMagazine() {
+        self.latestMagazine = []
+        for magazineURL in self.latestMagazineURL {
+            print(magazineURL)
+            _fetchLatestMagazine(urlString: magazineURL.magazineURL)
+        }
+        self.latestMagazine = self.latestMagazine
+    }
+    
     func fetchAllArticles() {
         self.articles = []
         if let selectedMagazine = selectedMagazine {
@@ -97,9 +107,10 @@ final class ModelData: ObservableObject, Decodable {
     
     func fetchLatestArticles() {
         self.latestArticles = []
-        if let latestMagazine = latestMagazine {
+        if let latestMagazine = self.latestMagazine.first {
+            print("==========")
             for article in latestMagazine.articles.sorted(by: { $0.id < $1.id}) {
-                _fetchArticle(urlString: article.articleURL)
+                _fetchLatestArticle(urlString: article.articleURL)
             }
         }
     }
@@ -112,6 +123,7 @@ final class ModelData: ObservableObject, Decodable {
         let request = URLRequest(url: magazineURL)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
             if let error = error {
+                print("997.")
                 print(error)
                 return
             }
@@ -119,6 +131,32 @@ final class ModelData: ObservableObject, Decodable {
                 DispatchQueue.main.async {
                     if let currentMagazine = self._parseMagazineJsonData(data: data) {
                         self.magazines.append(currentMagazine)
+                    } else {
+                        print("No current magazine found")
+                    }
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    private func _fetchLatestMagazine(urlString: String) {
+        guard let magazineURL = URL(string: urlString) else {
+            return
+        }
+        
+        let request = URLRequest(url: magazineURL)
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
+            if let error = error {
+                print("990.")
+                print(error)
+                return
+            }
+            if let data = data {
+                DispatchQueue.main.async {
+                    if let latest = self._parseMagazineJsonData(data: data) {
+                        print(latest)
+                        self.latestMagazine.append(latest)
                     } else {
                         print("No current magazine found")
                     }
@@ -136,6 +174,7 @@ final class ModelData: ObservableObject, Decodable {
         let request = URLRequest(url: articleURL)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
             if let error = error {
+                print("996")
                 print(error)
                 return
             }
@@ -160,6 +199,7 @@ final class ModelData: ObservableObject, Decodable {
         let request = URLRequest(url: articleURL)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
             if let error = error {
+                print("1.")
                 print(error)
                 return
             }
@@ -182,20 +222,22 @@ final class ModelData: ObservableObject, Decodable {
             let magazineURLs = try decoder.decode([MagazineURL].self, from: data)
             self.magazineURLs = magazineURLs.sorted(by: { $0.id > $1.id })
         } catch {
+            print("2.")
             print(error)
         }
         return magazineURLs
     }
     
-    private func _parseLatestMagazineJsonData(data: Data) -> LatestMagazineURL {
+    private func _parseLatestMagazineJsonData(data: Data) -> [LatestMagazineURL] {
         let decoder = JSONDecoder()
         do {
-            let latestMagazineURL = try decoder.decode(LatestMagazineURL.self, from: data)
+            let latestMagazineURL = try decoder.decode([LatestMagazineURL].self, from: data)
             self.latestMagazineURL = latestMagazineURL
         } catch {
+            print("3.")
             print(error)
         }
-        return self.latestMagazineURL
+        return latestMagazineURL
     }
     
     private func _parseMagazineJsonData(data: Data) -> Magazine? {
@@ -204,6 +246,7 @@ final class ModelData: ObservableObject, Decodable {
             let magazine = try decoder.decode(Magazine.self, from: data)
             self.magazine = magazine
         } catch {
+            print("4.")
             print(error)
         }
         return magazine
@@ -215,6 +258,7 @@ final class ModelData: ObservableObject, Decodable {
             let article = try decoder.decode(Article.self, from: data)
             self.article = article
         } catch {
+            print("5.")
             print(error)
         }
         return article

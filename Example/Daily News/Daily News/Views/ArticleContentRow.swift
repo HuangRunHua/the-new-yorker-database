@@ -22,15 +22,10 @@ struct ArticleContentRow: View {
             RoundedRectangle(cornerRadius: 7)
                 .frame(width: self.width)
                 .foregroundColor(.cardColor)
-                .shadow(radius: 7)
+                .shadow(radius: 3)
             VStack {
                 HStack(alignment: .top, spacing: 7) {
                     VStack(alignment: .leading) {
-//                        Text(currentArticle.hashTag.uppercased())
-//                            .font(Font.custom("Georgia", size: 15))
-//                            .foregroundColor(.hashtagColor)
-//                            .multilineTextAlignment(.leading)
-                        
                         Text(currentArticle.title)
                             .font(Font.custom("Georgia", size: 20))
                             .multilineTextAlignment(.leading)
@@ -76,6 +71,9 @@ struct ArticleContentRow: View {
             }
         }
         .frame(height: 200)
+        .padding(.bottom, 3.5)
+        .padding(.top, 3.5)
+        .padding([.leading, .trailing], 7)
     }
 }
 

@@ -25,11 +25,11 @@ struct MagazineList: View {
     
     /// 最新一期的杂志
     var latestMagazine: [Magazine] {
-        if let latestMagazine = self.magazines.first {
-            return [latestMagazine]
-        } else {
-            return []
-        }
+        return modelData.latestMagazine
+    }
+    
+    var latestMagazineURL: [LatestMagazineURL] {
+        return modelData.latestMagazineURL
     }
     
     private let gridItemLayout = [GridItem(.flexible())]
@@ -61,7 +61,7 @@ extension MagazineList {
             } else {
                 List {
                     VStack(alignment: .leading) {
-                        Text("Recent Issues")
+                        Text("Recent Issues".uppercased())
                             .fontWeight(.bold)
                             .padding([.leading, .top, .trailing])
                         ScrollView(.horizontal, showsIndicators: false) {
@@ -82,12 +82,15 @@ extension MagazineList {
                     .listRowInsets(EdgeInsets())
                     
                     VStack(alignment: .leading) {
-                        Text("Latest Stories")
+                        Text("Latest Stories".uppercased())
                             .fontWeight(.bold)
                             .padding([.leading, .top, .trailing])
                         
                         self.latestArticles
+                            .padding([.leading, .trailing])
                     }
+                    .listRowInsets(EdgeInsets())
+                    .listRowSeparator(.hidden)
                 }
                 
                 .listStyle(.plain)
@@ -111,68 +114,49 @@ extension MagazineList {
         #endif
         .onAppear {
             self.modelData.fetchLatestMagazineURLs(urlString: databaseURL)
+            self.modelData.fetchLatestEposideMagazineURL(urlString: self.latestMagazineJSONURL)
+            self.modelData.fetchLatestMagazine()
         }
         .onChange(of: magazineURLs.count) { newValue in
             if newValue > 0 {
                 self.modelData.fetchAllMagazines()
-                if let latestMagazine = self.modelData.magazines.first {
-                    self.modelData.latestMagazine = latestMagazine
-                    modelData.fetchLatestArticles()
-                }
-                
+            }
+        }
+        .onChange(of: self.latestMagazineURL.count) { newValue in
+            if newValue > 0 {
+                self.modelData.fetchLatestMagazine()
             }
         }
         .onChange(of: self.latestMagazine.count) { newValue in
             if newValue > 0 {
-                
+                self.modelData.fetchLatestArticles()
             }
         }
     }
+     
     
     @ViewBuilder
-    private var coverThumbnail: some View {
-        if let selectedMagazine = self.modelData.selectedMagazine {
-            if let coverImageURL = URL(string: selectedMagazine.coverImageURL) {
-                AsyncImage(url: coverImageURL) { phase in
-                    switch phase {
-                    case .success(let image):
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: self.thumbnailWidth)
-                    case .empty, .failure:
-                        Rectangle()
-                            .aspectRatio(selectedMagazine.coverImageWidth/selectedMagazine.coverImageHeight, contentMode: .fit)
-                                .foregroundColor(.secondary)
-                                .frame(width: self.thumbnailWidth)
-                    @unknown default:
-                        EmptyView()
+    private var latestArticles: some View {
+        if self.modelData.latestArticles.isEmpty {
+            HStack {
+                Spacer()
+                ProgressView()
+                Spacer()
+            }
+        } else {
+            ScrollView(showsIndicators: false) {
+                VStack {
+                    ForEach(self.modelData.latestArticles) { article in
+                        NavigationLink {
+                            ArticleView(currentArticle: article)
+                                .environmentObject(modelData)
+                        } label: {
+                            ArticleContentRow(currentArticle: article)
+                        }
                     }
-                }
-                .padding(5)
-                .background(Color.white)
-                .shadow(radius: 5)
-                .cornerRadius(self.thumbnailCornerRadius)
-                .padding()
-                .onTapGesture {
-                    self.showMagazineContents.toggle()
                 }
             }
         }
-    }
-    
-    private var latestArticles: some View {
-        ForEach(self.modelData.latestArticles) { article in
-            ArticleContentRow(currentArticle: article)
-        }
-//        GeometryReader { geo in
-//            LazyVGrid(columns: geo.size.width > geo.size.height ? lanscapeGridItemLayout: gridItemLayout) {
-//                ForEach(self.modelData.latestArticles) { article in
-//                    ArticleContentRow(currentArticle: article)
-//                }
-//            }
-//            .padding()
-//        }
     }
 }
 
