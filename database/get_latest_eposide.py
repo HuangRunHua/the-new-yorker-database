@@ -9,12 +9,15 @@ class DatabaseJSON(object):
         初始化DatabaseJSON。
         """
         self.__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__))) 
-        self.latest_dict = {}
+        self.latest_dict = []
         self.database_url = "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/"
 
     def generator_latest_magazine_json(self):
         eposide_names = self.__get_eposide_names()
-        self.latest_dict["magazineURL"] = self.database_url + max(eposide_names) + "/" + max(eposide_names) + ".json"
+        latest = {
+            "magazineURL": self.database_url + max(eposide_names) + "/" + max(eposide_names) + ".json"
+        }
+        self.latest_dict.append(latest) 
         with open(self.__location__ + "/latest.json", "w") as outfile:
             json.dump(self.latest_dict, outfile)
 

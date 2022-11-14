@@ -11,6 +11,8 @@ struct MagazineList: View {
     
     private let databaseURL: String = "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/database.json"
     
+    private let latestMagazineJSONURL: String = "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/latest.json"
+    
     @EnvironmentObject var modelData: ModelData
     
     var magazineURLs: [MagazineURL] {

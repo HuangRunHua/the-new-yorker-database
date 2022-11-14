@@ -16,6 +16,7 @@ final class ModelData: ObservableObject, Decodable {
     @Published var article: Article?
     @Published var selectedMagazine: Magazine?
     @Published var selectedArticle: Article?
+    @Published var latestMagazineURL: LatestMagazineURL?
     @Published var latestMagazine: Magazine?
     @Published var latestArticles: [Article] = []
     
@@ -23,6 +24,7 @@ final class ModelData: ObservableObject, Decodable {
         case magazineURLs
         case magazines
         case articles
+        case latestMagazineURL
     }
     
     required init(from decoder: Decoder) throws {
@@ -30,11 +32,33 @@ final class ModelData: ObservableObject, Decodable {
         magazineURLs = try value.decode([MagazineURL].self, forKey: .magazineURLs)
         magazines = try value.decode([Magazine].self, forKey: .magazines)
         articles = try value.decode([Article].self, forKey: .articles)
+        latestMagazineURL = try value.decode(LatestMagazineURL.self, forKey: .latestMagazineURL)
     }
     
     init() {}
     
     func fetchLatestMagazineURLs(urlString: String) {
+        guard let databaseURL = URL(string: urlString) else {
+            return
+        }
+        
+        let request = URLRequest(url: databaseURL)
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
+            if let error = error {
+                print(error)
+                return
+            }
+            if let data = data {
+                DispatchQueue.main.async {
+                    self.magazineURLs = self._parseJsonData(data: data)
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    /// 获得最新一期的杂志所在的URL
+    func fetchLatestEposideMagazineURL(urlString: String) {
         guard let databaseURL = URL(string: urlString) else {
             return
         }
@@ -161,6 +185,17 @@ final class ModelData: ObservableObject, Decodable {
             print(error)
         }
         return magazineURLs
+    }
+    
+    private func _parseLatestMagazineJsonData(data: Data) -> LatestMagazineURL {
+        let decoder = JSONDecoder()
+        do {
+            let latestMagazineURL = try decoder.decode(LatestMagazineURL.self, from: data)
+            self.latestMagazineURL = latestMagazineURL
+        } catch {
+            print(error)
+        }
+        return self.latestMagazineURL
     }
     
     private func _parseMagazineJsonData(data: Data) -> Magazine? {

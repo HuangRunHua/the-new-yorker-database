@@ -34,3 +34,7 @@ struct MagazineURL: Identifiable, Codable {
     var id: Int
     var magazineURL: String
 }
+
+struct LatestMagazineURL: Codable {
+    var magazineURL: String
+}
