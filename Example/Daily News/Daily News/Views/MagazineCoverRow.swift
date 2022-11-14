@@ -56,10 +56,9 @@ struct MagazineCoverRow: View {
                         .foregroundColor(.defaultFontColor)
                 }
                 .layoutPriority(1)
-
             }
-//            .padding([.leading, .trailing])
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

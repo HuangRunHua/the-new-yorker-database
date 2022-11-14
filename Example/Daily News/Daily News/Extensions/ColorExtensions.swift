@@ -10,4 +10,5 @@ import SwiftUI
 extension Color {
     static let defaultFontColor = Color("defaultFontColor")
     static let cloudColor = Color("cloudColor")
+    static let hashtagColor = Color("hashtagColor")
 }

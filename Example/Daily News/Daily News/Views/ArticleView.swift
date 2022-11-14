@@ -22,106 +22,86 @@ struct ArticleView: View {
     private let maxWidth: CGFloat = 800
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 30) {
-                    VStack(alignment: .leading, spacing: 7) {
-                        HStack {
-                            Text(self.currentArticle.hashTag.uppercased())
-                                .font(Font.custom("Georgia", size: 15))
-                                .foregroundColor(.red)
-                                .textSelection(.enabled)
-                            Spacer()
-                        }
-                        HStack {
-                            Text(self.currentArticle.title)
-                                .font(Font.custom("Georgia", size: 30))
-                                .textSelection(.enabled)
-                            Spacer()
-                        }
+        
+        ScrollView {
+            VStack(alignment: .leading, spacing: 30) {
+                VStack(alignment: .leading, spacing: 7) {
+                    HStack {
+                        Text(self.currentArticle.hashTag.uppercased())
+                            .font(Font.custom("Georgia", size: 15))
+                            .foregroundColor(.hashtagColor)
+                            .textSelection(.enabled)
+                        Spacer()
                     }
                     HStack {
-                        Text(self.currentArticle.subtitle)
-                            .font(Font.custom("Georgia", size: 20))
+                        Text(self.currentArticle.title)
+                            .font(Font.custom("Georgia", size: 30))
                             .textSelection(.enabled)
                         Spacer()
                     }
                 }
-                .multilineTextAlignment(.leading)
-                .padding()
-                
-                Divider()
-                
                 HStack {
-                    Text("By " + self.currentArticle.authorName)
-                        .font(Font.custom("Georgia", size: 15))
-                        .foregroundColor(.gray)
-                        .textSelection(.enabled)
-                    Text("·")
-                    Text(self.currentArticle.publishDate)
-                        .font(Font.custom("Georgia", size: 15))
-                        .foregroundColor(.gray)
+                    Text(self.currentArticle.subtitle)
+                        .font(Font.custom("Georgia", size: 20))
                         .textSelection(.enabled)
                     Spacer()
                 }
-                .padding([.leading, .trailing, .top])
-                .padding(.bottom, 25)
-                
-                VStack {
-                    AsyncImage(url: self.coverImageURL) { phase in
-                        switch phase {
-                        case .success(let image):
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .padding(.bottom)
-                        case .empty, .failure:
-                            Rectangle()
-                                .aspectRatio(self.currentArticle.coverImageWidth/self.currentArticle.coverImageHeight, contentMode: .fit)
-                                .foregroundColor(.secondary)
-                        @unknown default:
-                            EmptyView()
-                        }
-                    }
-                    
-                    Text(self.currentArticle.coverImageDescription)
-                        .font(Font.custom("Georgia", size: 15))
-                        .foregroundColor(.gray)
-                        .padding([.bottom])
-                        .padding([.leading, .trailing], 7)
-                }
-                
-                ForEach(self.currentArticle.contents) { content in
-                    VStack(alignment: .leading) {
-                        self.transmitToView(content)
-                    }
-                }
-                .padding([.leading, .trailing])
-                .padding(.bottom, 12)
             }
-            #if !os(macOS)
-            .navigationBarTitleDisplayMode(.inline)
-            .translateSheet($translateText)
-            #endif
-            .toolbar {
-                #if !os(macOS)
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Image(systemName: "chevron.left")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 20, height: 20)
-                        .foregroundColor(.accentColor)
-                        .onTapGesture {
-                            withAnimation {
-                                self.modelData.selectedArticle = nil
-                            }
-                        }
-                }
-                #endif
+            .multilineTextAlignment(.leading)
+            .padding()
+            
+            Divider()
+            
+            HStack {
+                Text("By " + self.currentArticle.authorName)
+                    .font(Font.custom("Georgia", size: 15))
+                    .foregroundColor(.gray)
+                    .textSelection(.enabled)
+                Text("·")
+                Text(self.currentArticle.publishDate)
+                    .font(Font.custom("Georgia", size: 15))
+                    .foregroundColor(.gray)
+                    .textSelection(.enabled)
+                Spacer()
             }
+            .padding([.leading, .trailing, .top])
+            .padding(.bottom, 25)
+            
+            VStack {
+                AsyncImage(url: self.coverImageURL) { phase in
+                    switch phase {
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.bottom)
+                    case .empty, .failure:
+                        Rectangle()
+                            .aspectRatio(self.currentArticle.coverImageWidth/self.currentArticle.coverImageHeight, contentMode: .fit)
+                            .foregroundColor(.secondary)
+                    @unknown default:
+                        EmptyView()
+                    }
+                }
+                
+                Text(self.currentArticle.coverImageDescription)
+                    .font(Font.custom("Georgia", size: 15))
+                    .foregroundColor(.gray)
+                    .padding([.bottom])
+                    .padding([.leading, .trailing], 7)
+            }
+            
+            ForEach(self.currentArticle.contents) { content in
+                VStack(alignment: .leading) {
+                    self.transmitToView(content)
+                }
+            }
+            .padding([.leading, .trailing])
+            .padding(.bottom, 12)
         }
         #if !os(macOS)
-        .navigationViewStyle(.stack)
+        .navigationBarTitleDisplayMode(.inline)
+        .translateSheet($translateText)
         #endif
     }
 }

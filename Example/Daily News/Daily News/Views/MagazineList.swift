@@ -31,23 +31,6 @@ struct MagazineList: View {
     private let thumbnailCornerRadius: CGFloat = 5
     
     var body: some View {
-//        ZStack {
-//            if let selectedArticle = self.modelData.selectedArticle {
-//                ZStack(alignment: .bottomTrailing) {
-//                    ArticleView(currentArticle: selectedArticle)
-//                        .environmentObject(modelData)
-//                    self.coverThumbnail
-//                }
-//                .sheet(isPresented: $showMagazineContents) {
-//                    if let selectedmagazine = self.modelData.selectedMagazine {
-//                        ArticleConetntsList(magazine: selectedmagazine)
-//                            .environmentObject(modelData)
-//                    }
-//                }
-//            } else {
-//                self.magazineList
-//            }
-//        }
         self.magazineList
     }
 }
@@ -64,7 +47,6 @@ extension MagazineList {
         NavigationView {
             if magazines.isEmpty {
                 ProgressView()
-                    .navigationTitle("THE NEW YORKER")
             } else {
                 List {
                     VStack(alignment: .leading) {
@@ -90,8 +72,18 @@ extension MagazineList {
                 }
                 
                 .listStyle(.plain)
-                .navigationTitle("THE NEW YORKER")
+                .navigationTitle("")
                 .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        VStack(spacing: 0) {
+                            Text("THE")
+                                .font(Font.custom("Georgia", size: 10))
+                            Text("NEWS+")
+                                .font(Font.custom("Georgia", size: 20))
+                        }
+                    }
+                }
             }
         }
         

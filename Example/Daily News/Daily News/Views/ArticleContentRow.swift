@@ -21,7 +21,7 @@ struct ArticleContentRow: View {
                 VStack(alignment: .leading, spacing: 10) {
                     Text(currentArticle.hashTag.uppercased())
                         .font(Font.custom("Georgia", size: 15))
-                        .foregroundColor(.red)
+                        .foregroundColor(.hashtagColor)
                         .multilineTextAlignment(.leading)
                     
                     Text(currentArticle.title)

@@ -45,7 +45,7 @@ final class ModelData: ObservableObject, Decodable {
             }
             if let data = data {
                 DispatchQueue.main.async {
-                    self.magazineURLs = self._parseJsonData(data: data)
+                    self.magazineURLs = self._parseJsonData(data: data).sorted(by: { $0.id < $1.id})
                 }
             }
         }
@@ -82,6 +82,7 @@ final class ModelData: ObservableObject, Decodable {
             if let data = data {
                 DispatchQueue.main.async {
                     if let currentMagazine = self._parseMagazineJsonData(data: data) {
+                        print(currentMagazine)
                         self.magazines.append(currentMagazine)
                     } else {
                         print("No current magazine found")
