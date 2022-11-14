@@ -53,4 +53,9 @@ if __name__ == "__main__":
     magazineJSON.generator_magazine_json(coverStory="“Neighborhood’s Finest,” by Roz Chast.",
                                             date="November 14, 2022",
                                             coverImageURL="https://media.newyorker.com/photos/63658ae20043641f2be3b555/master/w_760,c_limit/2022_11_14.jpg",
-                                            id="00000000-0000-0000-0000-000000000001")
+                                            id="00000000-0000-0000-0000-000000000003")
+    # magazineJSON = MagazineJSON(folder="2022-11-07")
+    # magazineJSON.generator_magazine_json(coverStory="“Fall Sweep,” by Adrian Tomine.",
+    #                                         date="November 7, 2022",
+    #                                         coverImageURL="https://media.newyorker.com/photos/635c00ceb120c5ac7a42bcea/master/w_760,c_limit/2022_11_07.jpg",
+    #                                         id="00000000-0000-0000-0000-000000000002")
