@@ -16,6 +16,8 @@ final class ModelData: ObservableObject, Decodable {
     @Published var article: Article?
     @Published var selectedMagazine: Magazine?
     @Published var selectedArticle: Article?
+    @Published var latestMagazine: Magazine?
+    @Published var latestArticles: [Article] = []
     
     enum CodingKeys: CodingKey {
         case magazineURLs
@@ -45,7 +47,7 @@ final class ModelData: ObservableObject, Decodable {
             }
             if let data = data {
                 DispatchQueue.main.async {
-                    self.magazineURLs = self._parseJsonData(data: data).sorted(by: { $0.id < $1.id})
+                    self.magazineURLs = self._parseJsonData(data: data)
                 }
             }
         }
@@ -57,12 +59,22 @@ final class ModelData: ObservableObject, Decodable {
         for magazineURL in self.magazineURLs {
             _fetchMagazine(urlString: magazineURL.magazineURL)
         }
+        self.magazines = self.magazines.sorted(by: { $0.id > $1.id })
     }
     
     func fetchAllArticles() {
         self.articles = []
         if let selectedMagazine = selectedMagazine {
             for article in selectedMagazine.articles.sorted(by: { $0.id < $1.id}) {
+                _fetchArticle(urlString: article.articleURL)
+            }
+        }
+    }
+    
+    func fetchLatestArticles() {
+        self.latestArticles = []
+        if let latestMagazine = latestMagazine {
+            for article in latestMagazine.articles.sorted(by: { $0.id < $1.id}) {
                 _fetchArticle(urlString: article.articleURL)
             }
         }
@@ -82,12 +94,10 @@ final class ModelData: ObservableObject, Decodable {
             if let data = data {
                 DispatchQueue.main.async {
                     if let currentMagazine = self._parseMagazineJsonData(data: data) {
-                        print(currentMagazine)
                         self.magazines.append(currentMagazine)
                     } else {
                         print("No current magazine found")
                     }
-                    
                 }
             }
         }
@@ -112,7 +122,30 @@ final class ModelData: ObservableObject, Decodable {
                     } else {
                         print("No current article found")
                     }
-                    
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    private func _fetchLatestArticle(urlString: String) {
+        guard let articleURL = URL(string: urlString) else {
+            return
+        }
+        
+        let request = URLRequest(url: articleURL)
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
+            if let error = error {
+                print(error)
+                return
+            }
+            if let data = data {
+                DispatchQueue.main.async {
+                    if let currentArticle = self._parseArticleJsonData(data: data) {
+                        self.latestArticles.append(currentArticle)
+                    } else {
+                        print("No current article found")
+                    }
                 }
             }
         }
@@ -123,7 +156,7 @@ final class ModelData: ObservableObject, Decodable {
         let decoder = JSONDecoder()
         do {
             let magazineURLs = try decoder.decode([MagazineURL].self, from: data)
-            self.magazineURLs = magazineURLs
+            self.magazineURLs = magazineURLs.sorted(by: { $0.id > $1.id })
         } catch {
             print(error)
         }

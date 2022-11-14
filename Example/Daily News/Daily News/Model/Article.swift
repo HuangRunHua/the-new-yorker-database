@@ -8,7 +8,7 @@
 import Foundation
 
 struct Article: Identifiable, Codable {
-    var id: UUID{
+    var id: UUID {
         return UUID()
     }
     var title: String

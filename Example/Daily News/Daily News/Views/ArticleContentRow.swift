@@ -15,48 +15,73 @@ struct ArticleContentRow: View {
         return URL(string: self.currentArticle.coverImageURL)
     }
     
+    @State private var width: CGFloat? = nil
+    
     var body: some View {
-        VStack {
-            HStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 10) {
-                    Text(currentArticle.hashTag.uppercased())
-                        .font(Font.custom("Georgia", size: 15))
-                        .foregroundColor(.hashtagColor)
-                        .multilineTextAlignment(.leading)
-                    
-                    Text(currentArticle.title)
-                        .font(Font.custom("Georgia", size: 20))
-                        .multilineTextAlignment(.leading)
-                        .foregroundColor(.defaultFontColor)
-                }
-                Spacer()
-                AsyncImage(url: self.coverImageURL) { phase in
-                    switch phase {
-                    case .success(let image):
-                        image
-                            .resizable()
-                            .aspectRatio(1, contentMode: .fit)
-                            .frame(width: 100)
-                            .cornerRadius(7)
-                    case .empty, .failure:
-                        Rectangle()
-                            .aspectRatio(1, contentMode: .fit)
-                            .frame(width: 100)
-                            .foregroundColor(.secondary)
-                            .cornerRadius(7)
-                    @unknown default:
-                        EmptyView()
+        ZStack {
+            RoundedRectangle(cornerRadius: 7)
+                .frame(width: self.width)
+                .foregroundColor(.cardColor)
+                .shadow(radius: 7)
+            VStack {
+                HStack(alignment: .top, spacing: 7) {
+                    VStack(alignment: .leading) {
+//                        Text(currentArticle.hashTag.uppercased())
+//                            .font(Font.custom("Georgia", size: 15))
+//                            .foregroundColor(.hashtagColor)
+//                            .multilineTextAlignment(.leading)
+                        
+                        Text(currentArticle.title)
+                            .font(Font.custom("Georgia", size: 20))
+                            .multilineTextAlignment(.leading)
+                            .foregroundColor(.defaultFontColor)
+                        Spacer()
+                    }
+                    Spacer()
+                    AsyncImage(url: self.coverImageURL) { phase in
+                        switch phase {
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 130, height: 130)
+                                .cornerRadius(7)
+                        case .empty, .failure:
+                            Rectangle()
+                                .foregroundColor(.gray)
+                                .frame(width: 130, height: 130)
+                                .cornerRadius(7)
+                        @unknown default:
+                            EmptyView()
+                        }
                     }
                 }
+                Divider()
+                HStack {
+                    Text(currentArticle.authorName)
+                        .foregroundColor(.gray)
+                        .fontWeight(.semibold)
+                    Spacer()
+                }
             }
-            Divider()
+            .padding()
+            .background(
+                GeometryReader { proxy in
+                    Color.clear
+                        .preference(key: WidthKey.self, value: proxy.size.width)
+                }
+            )
+            .onPreferenceChange(WidthKey.self) {
+                self.width = $0
+            }
         }
+        .frame(height: 200)
     }
 }
 
 struct ArticleContentRow_Previews: PreviewProvider {
     static var previews: some View {
         ArticleContentRow(currentArticle: Article(
-            title: "When Migrants Become Political Pawns Clothing", subtitle: "Governor DeSantis appeared to be attempting to troll people whose magnanimity, he seemed to believe, is inversely proportional to the extent to which a given problem has an impact on their own lives.", coverImageURL: "https://media.newyorker.com/photos/632e6d4211f4b55ac7d6eaf6/4:3/w_223,c_limit/comment-homepage.jpg", contents: [], coverImageWidth: 500, coverImageHeight: 500, hashTag: "Comment", authorName: "author name", coverImageDescription: "cover image description", publishDate: "publish date"))
+            title: "When Migrants Become Political Pawns Clothing", subtitle: "Governor DeSantis appeared to be attempting to troll people whose magnanimity, he seemed to believe, is inversely proportional to the extent to which a given problem has an impact on their own lives.", coverImageURL: "https://media.newyorker.com/photos/635abe1ccd95e0b0aea28cec/4:3/w_560,c_limit/221107_r41294.jpg", contents: [], coverImageWidth: 500, coverImageHeight: 500, hashTag: "Comment", authorName: "author name", coverImageDescription: "cover image description", publishDate: "publish date"))
     }
 }

@@ -8,7 +8,11 @@
 import Foundation
 import SwiftUI
 
-struct Magazine: Codable {
+struct Magazine: Codable, Equatable {
+    static func == (lhs: Magazine, rhs: Magazine) -> Bool {
+        return lhs.identityID == rhs.identityID
+    }
+    
     var identityID: UUID {
         return UUID(uuidString: self.id) ?? UUID()
     }

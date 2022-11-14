@@ -18,10 +18,19 @@ struct MagazineList: View {
     }
     
     var magazines: [Magazine] {
-        return modelData.magazines
+        return modelData.magazines.sorted(by: { $0.id > $1.id })
     }
     
-    private let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
+    /// 最新一期的杂志
+    var latestMagazine: [Magazine] {
+        if let latestMagazine = self.magazines.first {
+            return [latestMagazine]
+        } else {
+            return []
+        }
+    }
+    
+    private let gridItemLayout = [GridItem(.flexible())]
     
     private let lanscapeGridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     
@@ -69,6 +78,14 @@ extension MagazineList {
                         }
                     }
                     .listRowInsets(EdgeInsets())
+                    
+                    VStack(alignment: .leading) {
+                        Text("Latest Stories")
+                            .fontWeight(.bold)
+                            .padding([.leading, .top, .trailing])
+                        
+                        self.latestArticles
+                    }
                 }
                 
                 .listStyle(.plain)
@@ -96,6 +113,16 @@ extension MagazineList {
         .onChange(of: magazineURLs.count) { newValue in
             if newValue > 0 {
                 self.modelData.fetchAllMagazines()
+                if let latestMagazine = self.modelData.magazines.first {
+                    self.modelData.latestMagazine = latestMagazine
+                    modelData.fetchLatestArticles()
+                }
+                
+            }
+        }
+        .onChange(of: self.latestMagazine.count) { newValue in
+            if newValue > 0 {
+                
             }
         }
     }
@@ -131,15 +158,20 @@ extension MagazineList {
             }
         }
     }
+    
+    private var latestArticles: some View {
+        ForEach(self.modelData.latestArticles) { article in
+            ArticleContentRow(currentArticle: article)
+        }
+//        GeometryReader { geo in
+//            LazyVGrid(columns: geo.size.width > geo.size.height ? lanscapeGridItemLayout: gridItemLayout) {
+//                ForEach(self.modelData.latestArticles) { article in
+//                    ArticleContentRow(currentArticle: article)
+//                }
+//            }
+//            .padding()
+//        }
+    }
 }
 
-//                        LazyVGrid(columns: geo.size.width > geo.size.height ? lanscapeGridItemLayout: gridItemLayout) {
-//                            ForEach(magazines, id: \.identityID) { magazine in
-//                                MagazineCoverRow(magazine: magazine)
-//                                    .onTapGesture {
-//                                        self.showMagazineContents.toggle()
-//                                        self.modelData.selectedMagazine = magazine
-//                                    }
-//                            }
-//                        }
-//                        .padding()
+
