@@ -72,7 +72,7 @@ extension MagazineList {
                             .fontWeight(.bold)
                             .padding([.leading, .top, .trailing])
                         ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(alignment: .top) {
+                            HStack(alignment: .top, spacing: 14) {
                                 ForEach(magazines, id: \.identityID) { magazine in
                                     NavigationLink {
                                         ArticleConetntsList(magazine: magazine)
