@@ -26,18 +26,28 @@ struct ArticleView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 30) {
                     VStack(alignment: .leading, spacing: 7) {
-                        Text(self.currentArticle.hashTag.uppercased())
-                            .font(Font.custom("Georgia", size: 15))
-                            .foregroundColor(.red)
-                            .textSelection(.enabled)
-                        Text(self.currentArticle.title)
-                            .font(Font.custom("Georgia", size: 30))
-                            .textSelection(.enabled)
+                        HStack {
+                            Text(self.currentArticle.hashTag.uppercased())
+                                .font(Font.custom("Georgia", size: 15))
+                                .foregroundColor(.red)
+                                .textSelection(.enabled)
+                            Spacer()
+                        }
+                        HStack {
+                            Text(self.currentArticle.title)
+                                .font(Font.custom("Georgia", size: 30))
+                                .textSelection(.enabled)
+                            Spacer()
+                        }
                     }
-                    Text(self.currentArticle.subtitle)
-                        .font(Font.custom("Georgia", size: 20))
-                        .textSelection(.enabled)
+                    HStack {
+                        Text(self.currentArticle.subtitle)
+                            .font(Font.custom("Georgia", size: 20))
+                            .textSelection(.enabled)
+                        Spacer()
+                    }
                 }
+                .multilineTextAlignment(.leading)
                 .padding()
                 
                 Divider()
@@ -119,7 +129,7 @@ struct ArticleView: View {
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
         ArticleView(currentArticle: Article(
-            title: "title", subtitle: "subtitle", coverImageURL: "imageURL", contents: [], coverImageWidth: 500, coverImageHeight: 500, hashTag: "hash tag", authorName: "author name", coverImageDescription: "cover image description", publishDate: "publish date"))
+            title: "A Murder Roils the Cycling World", subtitle: "In gravel racing—the sport’s hottest category—the killing has exposed a lot of dirt.", coverImageURL: "imageURL", contents: [], coverImageWidth: 500, coverImageHeight: 500, hashTag: "A Reporter at Large", authorName: "author name", coverImageDescription: "cover image description", publishDate: "publish date"))
         .environmentObject(ModelData())
     }
 }

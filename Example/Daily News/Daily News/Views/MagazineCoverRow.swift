@@ -22,8 +22,7 @@ struct MagazineCoverRow: View {
                 case .success(let image):
                     image
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.bottom)
+                        .aspectRatio(self.magazine.coverImageWidth/self.magazine.coverImageHeight, contentMode: .fit)
                 case .empty, .failure:
                     Rectangle()
                         .aspectRatio(self.magazine.coverImageWidth/self.magazine.coverImageHeight, contentMode: .fit)
@@ -32,18 +31,30 @@ struct MagazineCoverRow: View {
                     EmptyView()
                 }
             }
+            .cornerRadius(7)
+            .padding(.bottom)
             HStack {
-                Text(self.magazine.date)
-                    .font(Font.custom("Georgia", size: 15))
+                Image(systemName: "cloud.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 11)
+                    .foregroundColor(Color.cloudColor)
+                    .layoutPriority(1)
+                Text(self.magazine.date.uppercased())
+                    .font(Font.custom("Georgia", size: 11))
                     .foregroundColor(.gray)
+                    .fontWeight(.bold)
+                    .lineLimit(1)
+                    .layoutPriority(0.5)
                 Spacer()
                 
                 Button {
                     
                 } label: {
                     Image(systemName: "ellipsis")
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.defaultFontColor)
                 }
+                .layoutPriority(1)
 
             }
         }
