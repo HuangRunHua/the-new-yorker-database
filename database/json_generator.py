@@ -54,10 +54,10 @@ class MagazineGenerator(object):
             article[info[0]] = info[1]
             """Fetch the cover image size"""
             if "coverImageURL" in article:
-                if article["coverImageURL"] != "":
-                    cover_image_size = ImageAnalyzer.get_image_size(url=article["coverImageURL"])
-                    article["coverImageWidth"] = cover_image_size[0]
-                    article["coverImageHeight"] = cover_image_size[1]
+                # if article["coverImageURL"] != "":
+                cover_image_size = ImageAnalyzer.get_image_size(url=article["coverImageURL"])
+                article["coverImageWidth"] = cover_image_size[0]
+                article["coverImageHeight"] = cover_image_size[1]
         """Fetch the content of the article"""
         article["contents"] = []
 

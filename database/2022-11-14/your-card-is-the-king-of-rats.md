@@ -2,7 +2,7 @@
 title: Your Card Is the King of Rats
 subtitle:  
 authorName: Martín Espada
-coverImageURL: 
+coverImageURL: https://media.newyorker.com/cartoons/6365bb17941700c40d8c0ba4/master/w_1200,c_limit/221114_a26143_rd2.jpg
 coverImageDescription: 
 hashTag: Poems
 publishDate: November 7, 2022
