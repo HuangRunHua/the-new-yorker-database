@@ -106,6 +106,12 @@ extension MagazineList {
                         }
                     }
                 }
+                .refreshable {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                        self.modelData.fetchAllMagazines()
+                        self.modelData.fetchLatestMagazine()
+                    }
+                }
             }
         }
         

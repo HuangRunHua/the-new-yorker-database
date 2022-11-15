@@ -24,6 +24,8 @@ struct Content: Identifiable, Codable {
         case quote = "quote"
         case body = "body"
         case image = "image"
+        case head = "head"
+        case second = "second"
     }
     
     var contentRole: Role {

@@ -31,12 +31,22 @@ struct ArticleView: View {
                             .font(Font.custom("Georgia", size: 15))
                             .foregroundColor(.hashtagColor)
                             .textSelection(.enabled)
+                            .contextMenu(ContextMenu(menuItems: {
+                                Button("Translate", action: {
+                                    self.translateText = self.currentArticle.hashTag
+                                })
+                            }))
                         Spacer()
                     }
                     HStack {
                         Text(self.currentArticle.title)
                             .font(Font.custom("Georgia", size: 30))
                             .textSelection(.enabled)
+                            .contextMenu(ContextMenu(menuItems: {
+                                Button("Translate", action: {
+                                    self.translateText = self.currentArticle.title
+                                })
+                            }))
                         Spacer()
                     }
                 }
@@ -44,6 +54,11 @@ struct ArticleView: View {
                     Text(self.currentArticle.subtitle)
                         .font(Font.custom("Georgia", size: 20))
                         .textSelection(.enabled)
+                        .contextMenu(ContextMenu(menuItems: {
+                            Button("Translate", action: {
+                                self.translateText = self.currentArticle.subtitle
+                            })
+                        }))
                     Spacer()
                 }
             }
@@ -56,12 +71,10 @@ struct ArticleView: View {
                 Text("By " + self.currentArticle.authorName)
                     .font(Font.custom("Georgia", size: 15))
                     .foregroundColor(.gray)
-                    .textSelection(.enabled)
                 Text("·")
                 Text(self.currentArticle.publishDate)
                     .font(Font.custom("Georgia", size: 15))
                     .foregroundColor(.gray)
-                    .textSelection(.enabled)
                 Spacer()
             }
             .padding([.leading, .trailing, .top])
@@ -89,6 +102,13 @@ struct ArticleView: View {
                     .foregroundColor(.gray)
                     .padding([.bottom])
                     .padding([.leading, .trailing], 7)
+                    .contextMenu(ContextMenu(menuItems: {
+                        Button("Translate", action: {
+                            if self.currentArticle.coverImageDescription != "" {
+                                self.translateText = self.currentArticle.coverImageDescription
+                            }
+                        })
+                    }))
             }
             
             ForEach(self.currentArticle.contents) { content in
@@ -139,24 +159,19 @@ extension ArticleView {
             .frame(maxWidth: self.maxWidth)
             
         case .body:
-            VStack {
-                ForEach(Array((content.text?.components(separatedBy: "\n").enumerated()) ?? Array([""]).enumerated()), id: \.offset) { index, element in
-                    HStack {
-                        Text(content.text?.components(separatedBy: "\n")[index] ?? "")
-                            .font(Font.custom("Georgia", size: 17))
-                            .textSelection(.enabled)
-                            .lineSpacing(7)
-                            .contextMenu(ContextMenu(menuItems: {
-                                Button("Translate", action: {
-                                    self.translateText = content.text ?? ""
-                                })
-                            }))
-                        Spacer()
-                    }
-                    .frame(maxWidth: self.maxWidth)
-                }
-                
+            HStack {
+                Text(content.text ?? "")
+                    .font(Font.custom("Georgia", size: 17))
+                    .textSelection(.enabled)
+                    .lineSpacing(7)
+                    .contextMenu(ContextMenu(menuItems: {
+                        Button("Translate", action: {
+                            self.translateText = content.text ?? ""
+                        })
+                    }))
+                Spacer()
             }
+            .frame(maxWidth: self.maxWidth)
             
         case .image:
             VStack {
@@ -180,7 +195,44 @@ extension ArticleView {
                     .foregroundColor(.gray)
                     .padding([.bottom])
                     .padding([.leading, .trailing], 7)
+                    .contextMenu(ContextMenu(menuItems: {
+                        Button("Translate", action: {
+                            if let imageDescription = content.imageDescription {
+                                self.translateText = imageDescription
+                            }
+                        })
+                    }))
             }
+        case .head:
+            HStack {
+                Text(content.text ?? "")
+                    .font(Font.custom("Georgia", size: 22))
+                    .fontWeight(.bold)
+                    .textSelection(.enabled)
+                    .lineSpacing(7)
+                    .contextMenu(ContextMenu(menuItems: {
+                        Button("Translate", action: {
+                            self.translateText = content.text ?? ""
+                        })
+                    }))
+                Spacer()
+            }
+            .frame(maxWidth: self.maxWidth)
+        case .second:
+            HStack {
+                Text(content.text ?? "")
+                    .font(Font.custom("Georgia", size: 20))
+                    .fontWeight(.bold)
+                    .textSelection(.enabled)
+                    .lineSpacing(7)
+                    .contextMenu(ContextMenu(menuItems: {
+                        Button("Translate", action: {
+                            self.translateText = content.text ?? ""
+                        })
+                    }))
+                Spacer()
+            }
+            .frame(maxWidth: self.maxWidth)
         }
     }
     
