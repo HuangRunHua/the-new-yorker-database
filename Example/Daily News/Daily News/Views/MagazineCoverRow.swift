@@ -11,9 +11,11 @@ struct MagazineCoverRow: View {
     
     var magazine: Magazine
     
-    var coverImageURL: URL? {
-        return URL(string: self.magazine.coverImageURL)
-    }
+//    var coverImageURL: URL? {
+//        return URL(string: self.magazine.coverImageURL)
+//    }
+    
+    @State private var coverImageURL: URL? = nil
     
     var body: some View {
         VStack(alignment: .leading, spacing: 1) {
@@ -59,6 +61,9 @@ struct MagazineCoverRow: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            self.coverImageURL = URL(string: self.magazine.coverImageURL)
+        }
     }
 }
 

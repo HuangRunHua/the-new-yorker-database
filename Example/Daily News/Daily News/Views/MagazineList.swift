@@ -34,7 +34,7 @@ struct MagazineList: View {
     
     private let gridItemLayout = [GridItem(.flexible())]
     
-    private let lanscapeGridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    private let lanscapeGridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     
     @State private var showMagazineContents: Bool = false
     
@@ -65,7 +65,7 @@ extension MagazineList {
                             .fontWeight(.bold)
                             .padding([.leading, .top, .trailing])
                         ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(alignment: .top, spacing: 14) {
+                            HStack(alignment: .bottom, spacing: 14) {
                                 ForEach(magazines, id: \.identityID) { magazine in
                                     NavigationLink {
                                         ArticleConetntsList(magazine: magazine)
