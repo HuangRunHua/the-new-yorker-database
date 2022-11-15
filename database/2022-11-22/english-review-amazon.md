@@ -1,0 +1,16 @@
+---
+title: Amazon’s The English Is a Stunning Western That Reimagines America’s Founding Fantasy
+subtitle: The new miniseries starring Emily Blunt reimagines the founding fantasies of the American West
+coverImageURL: https://api.time.com/wp-content/uploads/2022/11/TE_130521_E01_DLC-18RC_thumb.jpeg?w=560&w=560
+coverImageDescription: Chaske Spencer and Emily Blunt in The English
+hashTag: ENTERTAINMENT
+publishDate: November 11, 2022
+---
+
+For the Europeans who colonized it in the 19th century, the American West promised money, power, and freedom. Civilization was an afterthought, except within the Indigenous communities that would fall prey to the genocidal ideology of Manifest Destiny. The conflict between ruthless, lawless self-interest and the human instinct to form bonds of mutual care has always been central to the western genre. Yet it’s rare to see a variation on the theme achieve the depth and poignance of The English.
+
+Written and directed by Hugo Blick, the creator of sophisticated, politically engaged British dramas like The Honorable Woman, this insightful Amazon-BBC co-production, which comes to Prime Video on Nov. 11, opens with a chance encounter. Upon arriving at a dusty hotel in the desolate Kansas of 1890, Lady Cornelia Locke (Emily Blunt) finds a badly beaten man, Eli Whipp (Chaske Spencer), chained to a post. She’s an English aristocrat on a mission to kill the man who killed her son. He’s a newly retired Pawnee scout traveling to Nebraska to claim land he’s owed under the Homestead Act but—despite and because his ancestors made their homes in the same area—will likely have to take by force. She saves him, then he saves her. They’re strangers, but unlike other strangers who cross paths on these eerily empty plains, they’ve earned each other’s trust.
+
+As they ride north, it slowly becomes apparent that they have more in common than a direction or their loneliness or an increasingly affectionate allyship. Known for the complexity of both his story lines and the moral quagmires he creates, Blick populates three decades’ worth of history surrounding the dual protagonists with often-ghoulish supporting characters who represent all sorts of wild, self-serving beliefs about destiny, loyalty, revenge, ethics, identity. The English makes the argument that these mismatched convictions, forged from the bloody battles fought between Native Americans and European invaders but also within each broadly defined group, converged to form a fantasy known as the United States of America.
+
+TV’s greatest western, Deadwood, arrived at a similar conclusion, paraphrasing an adage attributed to Napoleon as “history is a lie agreed upon.” The story of Cornelia and Eli is a different kind of lie; it’s a fiction, and one whose sentimentality in later installments of the six-episode series barely undermines its beauty as a counter-narrative. Violent, macabre, and in many ways tragic, The English doesn’t deny what we know about what really happened when cultures collided on the frontier. Instead, it finds beauty in imagining how different people in the same situation, driven by purer motives and united by trust, might have built something better.

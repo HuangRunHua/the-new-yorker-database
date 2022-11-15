@@ -49,11 +49,16 @@ class MagazineJSON(object):
         return article_names
 
 if __name__ == "__main__":
-    magazineJSON = MagazineJSON(folder="2022-11-21")
-    magazineJSON.generator_magazine_json(coverStory="“Low Tide,” by Barry Blitt.",
-                                            date="November 21, 2022",
-                                            coverImageURL="https://media.newyorker.com/photos/636eba572857dc647aaac234/master/w_760,c_limit/2022_11_21.jpg",
-                                            id="00000000-0000-0000-0000-000000000004")
+    magazineJSON = MagazineJSON(folder="2022-11-22")
+    magazineJSON.generator_magazine_json(coverStory="How Democrats Defied History in the Midterms—And What It Means for 2024",
+                                            date="November 22, 2022",
+                                            coverImageURL="https://api.time.com/wp-content/uploads/2022/11/TIM221121_ElectionCover.jpg?quality=85&w=840",
+                                            id="00000000-0000-0000-0000-000000000005")
+    # magazineJSON = MagazineJSON(folder="2022-11-21")
+    # magazineJSON.generator_magazine_json(coverStory="“Low Tide,” by Barry Blitt.",
+    #                                         date="November 21, 2022",
+    #                                         coverImageURL="https://media.newyorker.com/photos/636eba572857dc647aaac234/master/w_760,c_limit/2022_11_21.jpg",
+    #                                         id="00000000-0000-0000-0000-000000000004")
     # magazineJSON = MagazineJSON(folder="2022-11-14")
     # magazineJSON.generator_magazine_json(coverStory="“Neighborhood’s Finest,” by Roz Chast.",
     #                                         date="November 14, 2022",
