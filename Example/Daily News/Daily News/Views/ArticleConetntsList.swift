@@ -44,6 +44,7 @@ struct ArticleConetntsList: View {
                     Text(self.magazine.coverStory)
                         .font(Font.custom("Georgia", size: 17))
                 }
+                .padding([.leading, .trailing])
             }
             .padding([.bottom])
             

@@ -1,6 +1,7 @@
 ---
 title: Amazon’s The English Is a Stunning Western That Reimagines America’s Founding Fantasy
 subtitle: The new miniseries starring Emily Blunt reimagines the founding fantasies of the American West
+authorName: Judy Berman
 coverImageURL: https://api.time.com/wp-content/uploads/2022/11/TE_130521_E01_DLC-18RC_thumb.jpeg?w=560&w=560
 coverImageDescription: Chaske Spencer and Emily Blunt in The English
 hashTag: ENTERTAINMENT
