@@ -1,0 +1,23 @@
+---
+title: Ju Qi Captures the Culture of Beijing
+subtitle: A new restaurant in Flushing offers a thrillingly theatrical whole-duck experience, a mashed-potato Lord Rabbit, a mah-jongg-board dessert, and much more.
+authorName: Hannah Goldfield
+coverImageURL: https://media.newyorker.com/photos/63643a478d1a1076471b65fb/master/w_960,c_limit/221114_r41330.jpg
+coverImageDescription: Almond tofu pudding arrives in the shape of an upturned peach.
+hashTag: Tables for Two
+publishDate: November 4, 2022
+---
+
+The other night, as some friends and I left dinner at Ju Qi, in a new luxury mall called Tangram, in Flushing, we passed a group of patrons in the foyer behaving like kids in a candy store, literally, raiding bowls of complimentary treats with glee. They proffered handfuls for us to try, too: foil-wrapped disks of haw flakes, ruddy-pink wafers made from the red berries of the Chinese hawthorn; miniature twists of brown-sugar-glazed fried dough known as ma hua.
+
+One member of the group, a native of Beijing, wore a hazy glow of nostalgia that I imagine would please Ju Qi’s founder, Tong Han. In 2014, Han, a Beijinger, opened the first Ju Qi—which has twenty locations in China and one in Sydney—to showcase the culture of his home town. In Flushing, the dining room’s décor, which incorporates bricks shipped from Beijing, is inspired by that city’s hutong, charming residential alleyways dating from the Yuan dynasty.
+
+Birds are a big theme here, reflecting the Beijing custom, popularized during the Qing dynasty, of keeping them as pets. Light fixtures resemble birdhouses, and a table for large groups sits inside an enormous gilded cage. The most obvious thing to eat is a bird—a whole Peking duck, carved tableside. First, a chef with the precision of a surgeon removes a long strip of lacquered, golden skin, which gets razored into segments the size of postage stamps; each is placed atop a square of steamed bread and finished with a delicate pile of sturgeon caviar. From what looks like a royal jewel chest, a server pulls tiny drawers housing accoutrements—hoisin, scallions, matchsticks of cucumber, pickles, honeydew melon—then demonstrates the optimal technique for wrapping slices of meat and garnishes into bing pancakes, plucked from a bamboo steamer.
+
+![Ju Qi showcases the cultural history of Beijing with dishes both traditional and theatrical.](https://media.newyorker.com/photos/63643a476f208ed87e04c51e/master/w_1600,c_limit/221114_r41353.jpg)
+
+It’s a thrillingly theatrical experience, with a grand finale: Do you want the carcass hacked into bite-size pieces and crisp-fried, or submerged in a fragrant and savory cloudy soup, with silken tofu and tender greens? I preferred the latter, but both preparations do justice to the precious bits of meat and fat which cling to the bones.
+
+As you scroll through the handsomely photographed digital menu, on an oversized tablet, dense with offal and intriguing sea creatures, some items may stop you in your tracks. Chief among them is the mashed potato in the shape of Lord Rabbit (a.k.a. Mr. Rabbit), a totem of Beijing traditionally used for worship and often seen in decoration, as a symbol of happiness. Intricately hand-painted with food-safe inks, this edible doll stands in a pool of what is essentially honey mustard, making up for what it lacks in flavor with what it inspires by way of good cheer. Other dishes are all the more astonishing for how unassuming they appear. Amid threads of shredded potato, as supple as noodles, hide cubes of fried potato, clusters of millet, scallion greens, garlic, and melty bits of fried pork fat. My chopsticks returned again and again to a bowl of actual noodles: chewy, wavy, hand-pulled zhajiangmian, a Beijing signature, slick with a sauce of minced pork and fermented soybean paste, and jumbled with boiled soybeans, peanuts, pine nuts, cucumber, and green radish.
+
+For dessert, there’s a gorgeous mah-jongg board with trompe-l’oeil pieces made from yellow-pea paste. It’s as much of a stunt as Ju Qi’s late-night shift to a limited menu of much spicier dishes—available until 5 a.m. seven days a week—and as the restaurant’s custom of marking birthdays with parchment scrolls foretelling good fortune, quill-written and presented to celebrants by a staffer wearing Qing-dynasty garb. In flavor, the mah-jongg confection pales in comparison with a simple bowl of Beijing-style yogurt: custardy and tangy, capped with a thick gloss of honey and a dusting of pollen, honoring the bees along with the birds, and the best of Beijing. (Dishes $6-$109.)

@@ -1,0 +1,19 @@
+---
+title: Winter Theatre Preview
+subtitle: Josh Groban and Annaleigh Ashford in “Sweeney Todd,” Aaron Sorkin’s revised “Camelot,” Andy Warhol and Jean-Michel Basquiat together onstage, and more.
+authorName: Michael Schulman
+coverImageURL: https://media.newyorker.com/photos/636437d7e7f895de251bf167/master/w_960,c_limit/221114_r41326.jpg
+coverImageDescription: Illustration by Tomi Um
+hashTag: The Theatre
+publishDate: November 5, 2022
+---
+
+It’s been a year since Stephen Sondheim died and, not surprisingly, his œuvre is getting a hefty workout. On the heels of a crowd-pleasing revival of “Into the Woods,” Sondheim’s 1979 musical thriller, “Sweeney Todd: The Demon Barber of Fleet Street,” slashes its way back to Broadway. Thomas Kail’s production, beginning previews on Feb. 26, at the Lunt-Fontanne, features Josh Groban as the murderous barber, the incandescent Annaleigh Ashford as his pie-making accomplice, and a twenty-six-piece orchestra. Downtown, New York Theatre Workshop revives “Merrily We Roll Along” (starting Nov. 21), Sondheim’s beloved problem child from 1981, which follows the disintegration of a three-way friendship in reverse chronology, from jaded middle age back to hopeful youth. Daniel Radcliffe, Jonathan Groff, and Lindsay Mendez star in Maria Friedman’s production.
+
+Sondheim, oddly enough, shared a birthday with his aesthetic antipode, Andrew Lloyd Webber, whose juggernaut “The Phantom of the Opera” ends its decades-spanning run on Feb. 18. But Broadway won’t be left Webberless: on Feb. 17, at the Imperial, previews begin for his new musical, “Bad Cinderella,” a contemporary take on the fairy tale, with lyrics by David Zippel and a book by Emerald Fennell (the writer-director of “Promising Young Woman”); Linedy Genao plays Cinderella—but she’s bad!
+
+Lincoln Center Theatre, known for Bartlett Sher’s lush revivals of mid-century musicals, stages “Camelot” (March 9, Vivian Beaumont), Lerner and Loewe’s sprightly retelling of Arthurian legend, from 1960. Sher’s production has a revised book by Aaron Sorkin, so expect walk-and-talks with King Arthur (Andrew Burnap), Queen Guenevere (Phillipa Soo), and Sir Lancelot (Jordan Donica).
+
+Speaking of mythic figures, what do you get when you put Andy Warhol and Jean-Michel Basquiat together onstage? Art, egos, and Anthony McCarten’s play “The Collaboration” (Nov. 29, Samuel J. Friedman), about the exhibition that brought the art-world titans together. Manhattan Theatre Club’s production, directed by Kwame Kwei-Armah, stars Paul Bettany and Jeremy Pope. Stephen Adly Guirgis’s dark comedy “Between Riverside and Crazy” (Nov. 30, Hayes), which won the Pulitzer Prize in 2015, finally makes it to Broadway, courtesy of Second Stage and the director Austin Pendleton; Stephen McKinley Henderson and Common play a father and son trying to hold on to a rent-stabilized apartment. And the Broadway stalwarts Nathan Lane, Zoë Wanamaker, and Danny Burstein return in “Pictures from Home” (Jan. 10, Studio 54), Sharr White’s adaptation of Larry Sultan’s 1992 photo memoir, which interrogated and immortalized Sultan’s parents.
+
+Off Broadway highlights include “The Sign in Sidney Brustein’s Window” (Feb. 4, bam Harvey Theatre), a 1964 play by Lorraine Hansberry, set in bohemian Greenwich Village and starring Oscar Isaac and Rachel Brosnahan. Oliver Butler directs “A Bright New Boise” (Jan. 31, Pershing Square Signature Center), a 2010 drama by Samuel D. Hunter (“The Whale”), about a lapsed evangelical who returns to his home town and works at a Hobby Lobby. And in the Roundabout’s “The Wanderers” (Jan. 26, Laura Pels), a new drama by Anna Ziegler, Katie Holmes plays a movie star who enters the life—and complicates the marriage—of a famous novelist.
