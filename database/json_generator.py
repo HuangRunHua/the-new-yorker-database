@@ -76,6 +76,9 @@ class MagazineGenerator(object):
             elif content[0:2] == "> ":
                 parsed_content["role"] = "quote"
                 parsed_content["text"] = content[2:]
+            elif content[0:2] == "# ":
+                parsed_content["role"] = "head"
+                parsed_content["text"] = content[2:]
             elif content[0:3] == "## ":
                 parsed_content["role"] = "second"
                 parsed_content["text"] = content[3:]
@@ -117,6 +120,7 @@ class MagazineGenerator(object):
 
 
 if __name__ == "__main__":
-    article_analyzer = MagazineGenerator(folder="2022-11-14")
+    article_analyzer = MagazineGenerator(folder="2022-11-21")
+    # article_analyzer = MagazineGenerator(folder="2022-11-14")
     # article_analyzer = MagazineGenerator(folder="2022-11-07")
     article_analyzer.generat_jsons()

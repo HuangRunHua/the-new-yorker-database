@@ -1,0 +1,43 @@
+---
+title: “My Broken Language” Reinvents the Memoir
+subtitle: Quiara Alegría Hudes adapts her autobiography for the stage, showing how the arts we attend to, and the people we know, make us who we are.
+authorName: Vinson Cunningham
+coverImageURL: https://media.newyorker.com/photos/636d64272ab431f75c51006d/master/w_2240,c_limit/221121_r41378.jpg
+coverImageDescription: Hudes shows how others’ real lives, their true personalities, shiver through us.
+hashTag: The Theatre
+publishDate: November 14, 2022
+---
+
+One of my favorite moments in “My Broken Language”—written and directed by Quiara Alegría Hudes, at Signature Theatre’s Pershing Square Signature Center—comes when the femme performers of the play’s chorus walk in willowy patterns around the stage, each holding a book by a venerated writer. They lay the books on the ground and space them out precisely, forming a path. That image alone is enough to set forth the electric, often moving idea behind the play: that the arts we attend to—literary, religious, choreographic, conversational—are what, in the end, make us who we are and set us on our way. These books and their words are the substance of an unsettled soul, and have paved its road outward, into the world.
+
+While the books are paraded, the performers call out the names of their authors: Allen Ginsberg, William Shakespeare, and Esmeralda Santiago are mentioned. (I glimpsed one of my own long-loved books, Santiago’s “When I Was Puerto Rican,” just before it got placed on the ground.) “Where would I be without ‘The House on Mango Street’?” somebody asks, referencing Sandra Cisneros’s classic coming-of-age novel.
+
+In Cisneros’s recent poem “Tea Dance, Provincetown, 1982,” published in this magazine, she describes growing up—her constant subject—on the raucous, energetic dance floors of that summer resort town:
+
+> We were all on the run in ’82. Jumping to Laura Branigan’s “Gloria,” the summer’s theme song. Beat thumping in our blood. Drinks sweeter than bodies convulsing on the floor.
+
+Growing up, that poem posits, happens not alone but in concert, not as a private individual but as a being among beings in thrumming community, each person buffing a new facet of another’s emerging identity. That’s Hudes’s ethos, too. Nobody’s ever alone onstage.
+
+“My Broken Language” is adapted from Hudes’s memoir of the same name, published last year. (Hudes won the Pulitzer Prize for drama, in 2012, for her play “Water by the Spoonful,” and wrote the book for Lin-Manuel Miranda’s musical “In the Heights.”) The play’s text is, almost uniformly, a monologue with the texture of loving, lyrical prose. Five performers—Zabryna Guevara, Yani Marin, Samora la Perdida, Marilyn Torres, and the always exciting Daphne Rubin-Vega, a longtime presence in Hudes’s work—take turns embodying the voice of the narrator, here called the Author. They move with a fluid grace through a green-tiled, houseplant-bedecked space, overhung with white ceiling fans, designed by Arnulfo Maldonado.
+
+Hudes was raised in Philadelphia, surrounded by the Puerto Rican culture of her mother’s family. While one actor pours forth Hudes’s autobiographical material, often in the form of highly charged vignettes, describing social worlds and interior states in quick, compressed strokes, the others play members of her family: her mother or her coterie of revered older cousins.
+
+The Author is obviously Hudes, but what makes this an original play and not a regurgitated version of her memoir is the implication, realized in these bodies, that an autobiography is common property, not a house behind a fence. Others’ real lives, their true personalities—call them spirits—shiver through us, leaving their mark. They make us dance and sing and mimic their speech. Why else can our friends “do” us so well, developing physical and vocal impressions that flatter and mortify us with their emotional truth? Maybe that’s why literature is so important to friendship: you read a book and so do I, and suddenly some region in both of our minds—a way of talking, thinking, feeling—becomes identical.
+
+“My Broken Language” is structured in “movements,” a nod to Hudes’s musical background: she plays piano and studied music at Yale. Onstage with the actors, backing them up or marking space between their words, is a pianist, Ariacne Trujillo-Durand. The sections move forward in time, showing us new aspects of the Author’s particular language. First comes a lovely portrait of Hudes’s cousins, whom she calls the “Perez women,” describing them—and, because their lives are all so powerfully intertwined, herself—in the kind of detail that comes only by way of prolonged proximity:
+
+> Cuca, Tico, Flor, and Nuchi. Saying their names filled me with awe. They had babies and tats. I had blackheads and wedgies. They had curves and moves. I had puberty boobs called nipple-itis. They had acrylic tips in neon colors. I had piano lessons and nubby nails. They spoke Spanish like Greg Louganis dove—twisting, flipping, explosive—and laughed with the magnitude of a mushroom cloud.
+
+There’s a wistfulness in passages like this one, and throughout the play. It’s the feeling of an artist looking back, surveying the fragmented landscape of her life, overlaying its confusions in retrospect, now armed with hard-won language. Hudes has a talent for describing the bodies of women. She writes with a rhythm and a tempo that match their curvature, and employs unlikely, often funny metaphors, ranging from pop culture to archeological and cosmic phenomena. Here she is, later on, now an M.F.A. student in playwriting at Brown, talking about the range of feminine figures she finds:
+
+> After an El ride north through the desolate landscape, my matriarchs’ bodies were natural wonders. Nuchi’s eroded cheekbones were my Grand Canyon. Mom’s thigh jiggles my Niagara Falls. The tattoo on Ginny’s breast my Aurora Borealis. Facial moles like cacti in the sierra, front-tooth gaps like keyhole nebulae. The cellulite over their asses shone with a brook’s babbling glimmer. The sag of each tit—big ones and small—like stalactites of epochal formation. Stalactitties!
+
+That early vignette about Hudes’s cousins ends with the Author getting her period, that most personal and bodily marker of a young woman’s passage into a new movement of her life—an early digit in the “thousand natural shocks” that a girl’s sensibilities become attuned to. Soon after that scene comes a different kind of rite: the Author witnesses her mother, an initiate into the Yoruba priesthood, being possessed by a spirit. The Author’s voice, moving among bodies, is a kind of possession, too.
+
+Her mother’s religion, unsanctioned and all but unknown in the American mainstream, makes Hudes aware that she lives her life across spheres, across languages, across oceans. This might be the deep source of Hudes’s facility with figurative language, fired by unexpected comparisons: all her life, the play seems to say, she has been drawing connections between seemingly unlike things. Her own unique English—musical, repetitive, intense—is a syncretistic stew. She realizes how her mother’s ceremony and her cousins’ dancing are really one thing:
+
+> How propulsive and insistent their hips were, as if conducted by some magnificent force. Those gatherings were secular, this one was spiritual. And yet, a pulse is a pulse is a pulse. A drum is a drum is a drum. Yes, it was true, and here lay the evidence: dance and possession were dialects off the same mother tongue. I spoke neither. English, my best language, had no vocabulary for the possession nor the dance. And English was what I was made of. Would my words and my world ever align?
+
+The answer, made evident in this play, is yes. “My Broken Language” is the product and the proof of a long process. Watching it and listening to it, my thoughts often strayed toward genre. After all, this is essentially a personal essay acted out. But the complications that so often come with personal writing—self-obsession, claustrophobic enclosure, a certain stubborn myopia—are nowhere in evidence. Sure, there are places where the Author’s voice goes mawkish and her prose crosses that often untraceable line between lyricism and purpleness. But probing, intelligent, earnest voices—the kind we hear when we close our eyes and think of life—sometimes tend that way, too.
+
+As the actors tossed the Author’s voice around, each excavating a new aspect of its appeal, I kept hoping that the production would hint at a way forward for personal essayists and other writers growing tired of their own interior monologues. Maybe they could put them up onstage and divide them among bodies and see what happens when they bounce off the walls.
