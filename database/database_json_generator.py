@@ -20,11 +20,12 @@ class DatabaseJSON(object):
         eposide_names = self.__get_eposide_names()
         index = 1
         for eposide_name in eposide_names:
-            eposide_dict = {}
-            eposide_dict["id"] = index
-            eposide_dict["magazineURL"] = self.database_url + eposide_name + "/" + eposide_name + ".json"
-            self.database_dict.append(eposide_dict)
-            index += 1
+            if eposide_name != "images":
+                eposide_dict = {}
+                eposide_dict["id"] = index
+                eposide_dict["magazineURL"] = self.database_url + eposide_name + "/" + eposide_name + ".json"
+                self.database_dict.append(eposide_dict)
+                index += 1
         with open(self.__location__ + "/database.json", "w") as outfile:
             json.dump(self.database_dict, outfile)
 
