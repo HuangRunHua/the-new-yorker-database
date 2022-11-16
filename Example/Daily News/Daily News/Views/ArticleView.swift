@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ArticleView: View {
     
+    @AppStorage("FontSize") var fontSize: Int = 0
+    
     @State var translateText: String?
+    
+    @State private var showingPopover = false
     
     var currentArticle: Article
     
@@ -98,7 +102,7 @@ struct ArticleView: View {
                 }
                 
                 Text(self.currentArticle.coverImageDescription)
-                    .font(Font.custom("Georgia", size: 15))
+                    .font(Font.custom("Georgia", size: CGFloat(15 + fontSize)))
                     .foregroundColor(.gray)
                     .padding([.bottom])
                     .padding([.leading, .trailing], 7)
@@ -123,6 +127,29 @@ struct ArticleView: View {
         .navigationBarTitleDisplayMode(.inline)
         .translateSheet($translateText)
         #endif
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Menu {
+                    Button {
+                        if self.fontSize > 0 {
+                            self.fontSize -= 1
+                        }
+                    } label: {
+                        Label("Smaller size", systemImage: "textformat.size.smaller")
+                    }
+
+                    Button {
+                        if self.fontSize < 7 {
+                            self.fontSize += 1
+                        }
+                    } label: {
+                        Label("Larger size", systemImage: "textformat.size.larger")
+                    }
+                } label: {
+                    Image(systemName: "textformat.size")
+                }
+            }
+        }
     }
 }
 
@@ -142,7 +169,7 @@ extension ArticleView {
         case .quote:
             HStack {
                 Text(content.text ?? "")
-                    .font(Font.custom("Georgia", size: 17))
+                    .font(Font.custom("Georgia", size: CGFloat(17 + fontSize)))
                     .foregroundColor(.gray)
                     .padding([.leading, .trailing])
                     .multilineTextAlignment(.leading)
@@ -161,7 +188,7 @@ extension ArticleView {
         case .body:
             HStack {
                 Text(content.text ?? "")
-                    .font(Font.custom("Georgia", size: 17))
+                    .font(Font.custom("Georgia", size: CGFloat(17 + fontSize)))
                     .textSelection(.enabled)
                     .lineSpacing(7)
                     .contextMenu(ContextMenu(menuItems: {
@@ -191,7 +218,7 @@ extension ArticleView {
                     }
                 }
                 Text(content.imageDescription ?? "")
-                    .font(Font.custom("Georgia", size: 15))
+                    .font(Font.custom("Georgia", size: CGFloat(15 + fontSize)))
                     .foregroundColor(.gray)
                     .padding([.bottom])
                     .padding([.leading, .trailing], 7)
@@ -206,7 +233,7 @@ extension ArticleView {
         case .head:
             HStack {
                 Text(content.text ?? "")
-                    .font(Font.custom("Georgia", size: 22))
+                    .font(Font.custom("Georgia", size: CGFloat(22 + fontSize)))
                     .fontWeight(.bold)
                     .textSelection(.enabled)
                     .lineSpacing(7)
@@ -221,7 +248,7 @@ extension ArticleView {
         case .second:
             HStack {
                 Text(content.text ?? "")
-                    .font(Font.custom("Georgia", size: 20))
+                    .font(Font.custom("Georgia", size: CGFloat(20 + fontSize)))
                     .fontWeight(.bold)
                     .textSelection(.enabled)
                     .lineSpacing(7)
