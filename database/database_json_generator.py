@@ -3,6 +3,10 @@ import os
 import glob
 import json
 
+"""
+Update the all database thirdly.
+"""
+
 class DatabaseJSON(object):
     def __init__(self) -> None:
         """

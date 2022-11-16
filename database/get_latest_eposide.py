@@ -3,6 +3,11 @@ import os
 import glob
 import json
 
+
+"""
+Finally fetch the latest magazine by calling this.
+"""
+
 class DatabaseJSON(object):
     def __init__(self) -> None:
         """

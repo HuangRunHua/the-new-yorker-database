@@ -3,6 +3,11 @@ import os
 import glob
 import json
 
+"""
+After creating the json format of articles run 
+this python file to create current magazine content json file.
+"""
+
 class MagazineJSON(object):
     def __init__(self, folder: str) -> None:
         """

@@ -3,6 +3,11 @@ import os
 import glob
 import json
 
+
+"""
+When adding new articles run this python file first.
+"""
+
 class MagazineGenerator(object):
     """
     用于将单期杂志内文章转为JSON格式的工具。
