@@ -2,8 +2,8 @@
 title: What We Know—and Don’t Know—About Elon Musk’s Ever-Changing Verification Plans
 subtitle: Musk's plans to charge for blue-check Twitter accounts could have side effects
 authorName: Andrew R. Chow
-coverImageURL: https://api.time.com/wp-content/uploads/2022/11/GettyImages-1243763618.jpg?quality=85&w=100&h=100&crop=1
-coverImageDescription: 
+coverImageURL: https://static01.nyt.com/images/2022/11/09/business/09twitter-payments-01/merlin_216032403_06730f2f-5ed6-448e-af19-9ba7e3e01a65-superJumbo.jpg?quality=75&auto=webp
+coverImageDescription: Twitter’s headquarters in San Francisco. Elon Musk, the company’s new owner, has moved rapidly to overhaul the social media service.
 hashTag: BUSINESS
 publishDate: November 2, 2022
 ---
