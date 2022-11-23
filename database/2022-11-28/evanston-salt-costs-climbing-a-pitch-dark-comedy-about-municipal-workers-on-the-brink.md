@@ -1,0 +1,45 @@
+---
+title: “Evanston Salt Costs Climbing,” a Pitch-Dark Comedy About Municipal Workers on the Brink
+subtitle: Will Arbery tackles the climate crisis with a funny nightmare about human and environmental fragility.
+authorName: Helen Shaw
+coverImageURL: https://media.newyorker.com/photos/6375351a93bc4607e404a0b9/master/w_2240,c_limit/221128_r41428.jpg
+coverImageDescription: In “Evanston Salt Costs Climbing,” two men set out on an icy road.
+hashTag: The Theatre
+publishDate: November 21, 2022
+---
+
+There are four vibrant actors in Will Arbery’s bracing play “Evanston Salt Costs Climbing,” at Pershing Square Signature Center, but the show also has two stars not listed in the program: a pair of immense garage doors. The designer Matt Saunders has filled the proscenium, from the floor to the grid, with a huge wall—an expanse of what looks like corrugated steel pierced by those twin roll-up garage doors, with a single human-size door standing between them. This is the industrial warehouse where the city of Evanston, Illinois, keeps its piles of road salt, but it’s also where the audience stores its dread. The doors grind up and down, slow-opening mouths that reveal an interior as black as a throat. (Isabella Byrd lit the darkness; Mikaal Sulaiman did the chill-inducing sound design.) There’s a thin strip of playing area in front of the wall, where the characters—most of them employees of the Evanston municipal-works department—can stand and chat, and some scenes happen on black platforms inside the warehouse. But, even when the gates are rolled down tight, you sense the pull of that cold, lightless abyss behind them, dragging at the characters’ fragile human warmth like the vacuum of space.
+
+“Evanston Salt Costs Climbing” tells the tale of three frozen Januaries—2014, 2015, 2016—and of the two guys who drive Evanston’s salting truck, the mentally unstable Peter (Jeb Kreager) and the secretive Basil (Ken Leung). Their casting is canny: Kreager played a creepy cop on “Mare of Easttown”; Leung starred on “Lost” for years. “Evanston” exists somewhere between those two shows, toggling from “Easttown” ’s gritty, wintertime realism to “Lost” ’s Manichaean, allegorical menace.
+
+Arbery is the playwright of the moment—both our fascism-adjacent political one and the global-existential climate-crisis one. He was a Pulitzer Prize finalist in 2020 for “Heroes of the Fourth Turning,” his portrait of the right-wing faithful; this production, staged by the New Group and directed by Danya Taymor (she also directed “Heroes”), is the second major production of his to appear in New York this year. (“Corsicana” was at Playwrights Horizons over the summer, and its relative sweetness might linger for some audiences.) Taken together with his more experimental play “Plano,” these works display the components of the Arbery style. He employs a sense of the hidden, whether as a supernatural presence or as some coincidence that goes beyond the rational. He’s rhythmically very free, switching between long stretches of text, realistic talk, and rapid, language-as-sound exchanges. And there’s a single drumbeat driving his work: things are bad, the badness is out there, and, sorry to say, the badness is getting closer.
+
+Taymor, as before, explores all Arbery’s delicate shadings. Peter and Basil communicate in a shorthand built during their long nights on the roads, and the wonderful Leung and Kreager infuse a few pages of sophomoric back-and-forth (“Fuck you. No fuck you ha-ha”) with complex dramatic layers. Their boss, “assistant public works director in charge of city snow removal operations” Jane Maiworm (Quincy Tyler Bernstine, honored by the Obies in 2019 for sustained excellence), likes to pop by in the predawn hours before the men head out on their rounds. She rallies their spirits and reads them articles from the local paper. Will the climbing salt costs lead to layoffs? Are the roads safe? Maiworm is the conscience of the play, ready to defend her incremental, effortful, impossible work, even when she’s challenged on it. “Administration is service! Every day! That’s what I do! ” she cries.
+
+Maiworm has an adult stepdaughter, Jane Jr. (Rachel Sachnoff), who lives on a narrow ledge between debilitating anxiety and function, and she panics when her mother leaves her alone. “There’s something under everything and it’s making us all want to die,” she says, in one of Sachnoff’s most gripping scenes. Peter, too, senses this awful psychic pressure, and his joshing exchanges with Basil in their truck’s cab—they have a hilarious bit about the heat finally coming on and not wanting to “over-celebrate,” since it might offend the truck—cannot keep his depression at bay.
+
+> Peter: Thanks for trying to cheer me up but it takes a while to sink in. My toes are cold.
+
+> Basil: It’s a cold day.
+
+> Peter: Negative seventeen. Butta time. Suppa time for us. Butta time.
+
+> Basil: Butta time.
+
+> Peter: Okay but have you thought about what it would be like to die?
+
+> Basil: Like what, or like what, the feeling?
+
+> Peter: The feeling, yeah, of the dying, when it happens, what’s going on in your heart or brain.
+
+> Basil: Peter, are you asking me to go down into that feeling with you?
+
+Everybody’s scared. Maiworm is having horrible dreams about paving options. Basil misses his home in Greece, which he left for an unnamed reason, one possibly illuminated by the eerie short stories he writes. But Peter is the one who hums with threat. One moment, he’s talking about an innocent enthusiasm, like the Domino’s pizza tracker; the next, his overloaded emotional system throws off sparks. Melancholy is slow-creep contagious, but Peter also conveys a sense of immediate, crackling danger. Kreager is tall, and he uses his height effectively—he looms up suddenly next to Leung, like a tree that’s jumped in front of a skidding car.
+
+In a world of content warnings (one of which is included on the theatre’s Web site) and careful phrasing, Arbery’s bleakness and frank talk about the death urge are shocking. Characters connect because of shared hallucinations or coinciding suicidal thoughts. “You aren’t actually gonna kill yourself silently one night outta nowhere,” Peter says to Jane Jr., even though we have been worried about his capacity for self-harm for nearly the entire show. Perhaps one just likes “looking at the shadow body of it,” he suggests, elliptically, and the play prompts just this sort of Greek-tragedy-style catharsis—of watching people say and think the worst, knowing that it isn’t real.
+
+“Evanston” premièred in Massachusetts in 2018, but it somehow contains much of the desperation of the past three destabilizing years: there isn’t a flicker of sunshine in it, even though Arbery is reliably funny and, in an upside-down way, galvanizing. He broaches a host of hyper-relevant issues: a climate that grows less clement every year, the biome-destroying potential of road salt (“That’s what happens to bunnies in the winter. They eat salt and die confused,” Maiworm says), American municipal underinvestment, untreated mental illness. Maiworm is a devotee of the urbanist Jane Jacobs. (This is the play’s third Jane; Fates, Graces, and Furies also come in threes.) She gives Jacobs’s book “The Death and Life of Great American Cities” to the guys. Basil has memorized a quote, which he recites for Jane Jr.: “There is a quality even meaner than outright ugliness or disorder, and this meaner quality is the dishonest mask of pretended order.”
+
+Arbery’s project as a playwright is to yank away that “dishonest mask of pretended order,” using the means he has at hand—the empathetic tools of performance and the electrifying effects of wild unreality. Some very odd things happen in the deep nights and early mornings of “Evanston Salt Costs Climbing”: figures escape from nightmares, the dead climb up from underneath the asphalt, people take comfort, paradoxically, in despair.
+
+The reason for this, I think, is that Arbery is writing about issues that tend to lead to indulgent hopelessness. Look at what we’re doing to the earth, we think—well, it’s too far gone now to do anything. But what if looking right into the heart of catastrophe could actually get us to act? In “Evanston,” something pulsing and dark and Lovecraftian wants us dead—got it. The weather is getting worse—got it. But Maiworm is certainly still going. What’s so scary about some garage doors in the face of her sturdy labor? You couldn’t make this point so well without Bernstine in the role. As she has done in countless beautiful performances, she anchors the show with her wry, rasping voice and her refusal to sentimentalize. At one point, she struggles in a gale against the screaming wind. She hasn’t got her parka; she’s vulnerable. But I tell you—I wouldn’t bet on the wind.

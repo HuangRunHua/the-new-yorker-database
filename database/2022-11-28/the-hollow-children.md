@@ -1,0 +1,83 @@
+---
+title: The Hollow Children
+subtitle: 
+authorName: Louise Erdrich
+coverImageURL: https://media.newyorker.com/photos/63752d28da55c9d8765b1275/3:4/pass/221128_r41420web-story.jpg
+coverImageDescription: Illustration by Kevin Lucbert
+hashTag: Fiction
+publishDate: November 21, 2022
+---
+
+At the Tabor Bar, around beer No. 4, the men sometimes got into history farming, trading stories of their antecedents’ exploits and agonies. In the long ago, wheat prices had plunged and most of the bonanza farms had broken up. That was when their great-greats had bought the land. The men talked about old plagues, old equipment, old swaps of ownership, crops, land, and dire weather. John Pavlecky’s great-grandmother, at the age of nine, had survived the blizzard of 1923 by burrowing into a nearby haystack when the school bus didn’t show up. Diz remembered his grandfather telling stories about an Uncle Ivek, who had also endured that blizzard, which was particularly lethal because it happened on a misty and mild April day. Around eight that morning, the bus had been almost full of children and headed toward the school, when out of the northwest a wind of sixty miles per hour had dropped the temperature instantly to minus twenty and filled the air with a blistering-cold curtain of powder. Such a snow could blind your eyes and scour the features off your face.
+
+Ivek was a farmer, a part-time schoolteacher, and one of the bus drivers. He was taking his turn behind the wheel. In the back of a school notebook, not long after the blizzard, he wrote about what happened.
+
+Ivek was bouncing down the muddy road when the mist dissolved and he saw it—a boiling white mass rolling at him like annihilation. He drove straight in at full speed, hoping to make it the rest of the way on sheer momentum. But in the whiteout he slowed to a crawl. Then crept along, feeling through the tires for the road. The children had gone dead silent.
+
+The silence lasted until Ivek lost his feel of the road and knew that they had left it. The earth on either side of the Red River had been rolling-pinned by a vast and ancient glacier. The flat fields and prairie were of a time eternal, and the human presence in that expanse was slight. The children knew it, and he knew it. They had to keep moving or die. Luckily, he’d filled the gasoline tank.
+
+“How about a song?” Ivek shouted.
+
+“What shall we sing?” the Viveky boy called out from a few seats back. His voice trembled. Perhaps he thought that a church hymn would insure their admittance to Heaven.
+
+“We shall sing ‘Wild Clover.’ ”
+
+Ivek hadn’t noticed the girl. She touched her hand to his shoulder. It was Agnid Awbrey, daughter of a Welshman and an Irishwoman, a steady girl of eleven years, whose upbringing had been of the finest sort. From her mother, fearless good cheer, and from her father, a soldier who’d fought in Mesopotamia, drinking songs adapted for childish ears. She began. And she taught the other children the words as she went along, just the way Ivek taught his students to learn poems and stirring speeches by heart:
+
+> I’ve been a wild clover all summer long
+> And I’ve spent all my money on sunlight and song
+> But now I am falling asleep under snow
+> So I can return as wild clover once more.
+
+> And it’s yes, yea, ever
+> Yes, yea, ever and more
+> Shall I be the wild clover
+> Yea, ever and more.
+
+The song went on, amended verse after verse, with clapping and stamping on the chorus. It roused Ivek’s heart and he roared the chorus, too. When the children were tired of that song, there was another:
+
+> Fiery pillar on our journey
+> Lead us through the snow
+> Fire, fire, fire, fire.
+
+This one was also accompanied by stamping, pounding, clapping, and roaring. Agnid had probably made it up to keep them warm. But the children eventually quieted, spent.
+
+Ivek kept the school bus moving, sometimes jerking across the prairie and at times gliding on roads, determined not to drive into a ravine or be stopped by any means other than a warm house or a barn. His heart sped up so fast that he could hardly breathe. He thought of a child—Mary Wacha, so quiet and so good at math. Or Warwick, the boy who chopped wood for the school stove. Or small-boned Morris, only five years old, whom he’d directed Agnid to bundle in the blanket that usually draped his lap. He would get the children out of his mind only to have their parents crowd in. He knew the parents were praying that the bus had reached the schoolhouse before the worst hit. He thought of his friend John, whose child, the last on his route, he hadn’t picked up. Was she wandering in the blizzard? And Agnid’s father and mother, and his own wife, her dark hair all in a braid down to her waist. She was at home, and he was glad now that their children had been ill that morning and stayed with her. She would be praying, too. He put her out of his mind and drove on. And on. There was no telling. No telling which direction he was going and he knew not where he was. He knew only that he must not stop.
+
+“The others are hungry,” Agnid said at last. “I myself have a meat pie so great I cannot eat the whole. Shall I direct us to surrender our lunches and divide the food?”
+
+“Yes.” Ivek spoke without taking his eyes off the nothingness.
+
+“Then I will,” she said, “and fairly, in spite of the Spiral boys.”
+
+Ivek smiled even in their peril. “Have they given you trouble?”
+
+“I have them in hand.”
+
+Ivek heard the sounds of negotiation and discussion, voices kept low. He was in a cold sweat because, after a long stretch of flat surface, which he’d thought was possibly the Meridian Road, the bus was bumping over hummocks that didn’t feel like snow. For some reason, he imagined that it was a graveyard, although of course that was absurd. But then he felt a terrible slickness beneath the wheels. The bus skidded and his heart dropped. He was either farther south or farther west than he’d thought. They hadn’t gone down a steep riverbank, so he understood that they were on one of the arms of the deep lake that curved intimately below Tabor. And now, though he knew that it was unlikely in the extreme, his blighted mind reviewed the recent stretch of mild days and seized on the vision of the bus plunging to the bottom. He knew that the ice should still be sound throughout the lake, yet his unruly thoughts continued.
+
+Agnid tapped his shoulder and he nearly shrugged her off, but she reached around with the meat pie and let him know that the children had agreed he must have it. The instant he bit into the pie, his wheels found purchase. The roads were all straight section roads, though often little more than trails. Reading the way the snow was settling, he renewed his commitment to steering within a few degrees of center, creeping along even more slowly, peering down through the edge of his window, which he’d been forced to open a crack. He nosed at the drifts and used a bit of speed to grind through them, always returning to the central line. He went on, on, and on.
+
+The wind toyed with the bus, sometimes booming at its sides, sometimes sliding with a low whistle along the window tops. At times, it reached below the hood and shook the engine like a baby’s rattle. Ivek would shout to the children, “Sing that song! Sing that song about the fire!” The children sang for as long as they could. His sweat froze on his forehead. His leg shook as he pressed and let up on the brake. He blinked quickly so he wouldn’t run into a tree, few though they were. His mouth was so dry that his tongue was swelling. Staring desperately hard, he wondered about snow blindness. When the light assumed the flat bluish cast of skim milk, he knew that dusk was upon them, and they fell into the lake.
+
+It wasn’t, as he’d imagined, an icy plummet. The water seized them so swiftly that there was no fear or pain, and the fall was surprisingly gradual. They rocked and swayed, lakeweed swirling around their necks and ears. Startled fish swam to the door and by instinct he let them in. He knew that he and the children were all lost forever. He didn’t like his thoughts, but he was still glad that his son and his daughter were safe at home in the warmth of a good stove. He thought of them burning the wood that he’d chopped. There was plenty. But then he heard their voices behind him and realized that they had got on the bus after all.
+
+Sorrow cascaded over him as the bus settled on the bottom of the lake. When there was no use steering any longer, he rose in his grief and turned to the children. He meant to apologize and hoped to recommence the singing, but the children had changed. By unknown means, on the way down to the bottom, the children had become hollow. They were transparent and so frail that they were almost unbearably weighted down by their clothing. Sagging and faint, they listed in the seats, their skin membranous and glistening. Ivek knew that he must not allow them to guess how precarious their existence was, so he went down the center aisle collecting their coats. Once they’d shed their coats, some shot through the windows to the surface, while others would, he realized, spend their days at the bottom, waiting for their families to come to the lake and let down a line they might grasp—
+
+—hold of?
+
+Ivek’s eyes were open but somehow they opened. He was once again driving on the surface of the blinding earth. He caught a glimpse of the school to the left of the bus before snow slammed shut over the sight. He doubted what he’d seen, but his arms had faith. His hands guided the wheel according to his vision. He sensed that they were in the shadow of something large, a building. He pulled closer to the side. Idled the bus. It was the school. In the lee of the storm, he could see the familiar boards that he himself had painted.
+
+He stopped the bus. Opened the door. Wind almost sucked them out. He closed it again and instructed Agnid to sort out her classmates. They lined up in the aisle and made a chain of themselves behind the largest boy, a Spiral, with the smaller children in the middle, and, at the end, Ivek, with Morris grappled to his chest.
+
+The wind wrestled with them as they labored around the side of the school to the door, tumbled in. The children scrambled up and rushed to the stove. Ivek, who always set up the next day’s fire before he went home in the evening, unclenched his fingers, clumsily opened the tin matchbox, lighted a cone of newspaper. Fire leapt from the paper, snapped to the splinters of bark. Ivek stood back behind the children, as they crowded close, and the blaze rose up.
+
+Or did it?
+
+The chill in Ivek was far deeper than the fire could touch. The reality of the cold world beneath the ice was stronger than the warmth of the school. He turned away from the stove so the children wouldn’t see his tears. What was up and what was down? If he turned back, would the children still be warm and alive? Gritting their teeth in pain and happily whimpering as their numbed feet and fingers prickled to life? Or would they be frail blue human bubbles he’d failed to rescue? Would his son and his daughter be among them? Dissolved to froth? He closed his eyes. Again, he was down there with the fish darting in and out, lakeweed clogging the children’s mouths, each seat inhabited by a small, vanished life. And who was he? The driver or the one driven from existence by relentless snow? He reached—
+
+Agnid pressed into his open hand a cup of snow she’d melted. He looked at her. She was sturdy. The water was hot, steeped with a piece of boiled wool she’d cut away from her coat. This was, she said, an old cure that her mother used for wind sickness, times when the mind could no longer bear the wind’s moans and mumbles and a person started hearing human voices.
+
+He took the cup, drained it down. It tasted horrible, and he was cured.
+
+Or, rather, he was better. For the drive would leave its mark upon him in a way that someone who had not seen those children, blue and hollow under the lake, would never understand. That was why he wrote it down.
