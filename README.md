@@ -85,4 +85,4 @@ The attached `example` folder contains the code level example of how to fetch th
 
 ### Last but not least
 
-This repository will no longer be updated. Feel free to fork it for your own purpose.
+Since `The New Yorker` is a weekly magazine fills with abundant articles, the update of the weekly new issue may not catch up in time. Noted I also add the `Time magazine` to database and I still name the repository `the-new-yorker-database`, I just lazy and don't want to change the name.
