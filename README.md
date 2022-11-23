@@ -81,7 +81,7 @@ The `Database` contains all the magazines that are stored in the server. The str
 
 The attached `example` folder contains the code level example of how to fetch the `JSON` data and form a news app according to the data format mentioned above. The core UI of this app is shown in the following photo:
 
-![](https://github.com/HuangRunHua/the-new-yorker-database/raw/main/cover.jpg)
+![](https://github.com/HuangRunHua/the-new-yorker-database/raw/main/cover.jpeg)
 
 ### Last but not least
 
