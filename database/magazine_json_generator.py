@@ -54,11 +54,16 @@ class MagazineJSON(object):
         return article_names
 
 if __name__ == "__main__":
-    magazineJSON = MagazineJSON(folder="2022-11-28")
-    magazineJSON.generator_magazine_json(coverStory="“The Future Is Here,” by Birgit",
-                                            date="November 28, 2022",
-                                            coverImageURL="https://media.newyorker.com/photos/63765ebf573147b2b8a313a3/master/w_760,c_limit/2022_11_28.jpg",
-                                            id="00000000-0000-0000-0000-000000000006")
+    magazineJSON = MagazineJSON(folder="2022-11-29")
+    magazineJSON.generator_magazine_json(coverStory="Mom said, ‘When love calls, go.’ So I traveled 7,260 miles for a first date",
+                                            date="November 29, 2022",
+                                            coverImageURL="https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/images/LAT.png",
+                                            id="00000000-0000-0000-0000-000000000007")
+    # magazineJSON = MagazineJSON(folder="2022-11-28")
+    # magazineJSON.generator_magazine_json(coverStory="“The Future Is Here,” by Birgit",
+    #                                         date="November 28, 2022",
+    #                                         coverImageURL="https://media.newyorker.com/photos/63765ebf573147b2b8a313a3/master/w_760,c_limit/2022_11_28.jpg",
+    #                                         id="00000000-0000-0000-0000-000000000006")
     # magazineJSON = MagazineJSON(folder="2022-11-22")
     # magazineJSON.generator_magazine_json(coverStory="How Democrats Defied History in the Midterms—And What It Means for 2024",
     #                                         date="November 22, 2022",
