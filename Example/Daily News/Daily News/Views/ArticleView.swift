@@ -15,6 +15,9 @@ struct ArticleView: View {
     
     @State private var showingPopover = false
     
+    @State private var showLinkContent = false
+    @State private var selectedLink: URL?
+    
     var currentArticle: Article
     
     var coverImageURL: URL? {
@@ -150,6 +153,11 @@ struct ArticleView: View {
                 }
             }
         }
+        .sheet(isPresented: $showLinkContent) {
+            if let selectedLink = self.selectedLink {
+                SafariView(url: selectedLink)
+            }
+        }
     }
 }
 
@@ -266,6 +274,10 @@ extension ArticleView {
                     LinkView(previewURL: url)
                         .aspectRatio(contentMode: .fit)
                         .padding()
+                        .onTapGesture {
+                            self.selectedLink = url
+                            self.showLinkContent = true
+                        }
                 }
             }
         }
