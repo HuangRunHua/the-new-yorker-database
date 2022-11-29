@@ -34,7 +34,7 @@ struct MagazineList: View {
     
     private let gridItemLayout = [GridItem(.flexible())]
     
-    private let lanscapeGridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
+    private let lanscapeGridItemLayout = [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)]
     
     @State private var showMagazineContents: Bool = false
     
@@ -55,87 +55,108 @@ struct MagazineList_Previews: PreviewProvider {
 
 extension MagazineList {
     private var magazineList: some View {
-        NavigationView {
-            if magazines.isEmpty {
-                ProgressView()
-            } else {
-                List {
-                    VStack(alignment: .leading) {
-                        Text("Recent Issues".uppercased())
-                            .fontWeight(.bold)
-                            .padding([.leading, .top, .trailing])
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(alignment: .bottom, spacing: 14) {
-                                ForEach(magazines, id: \.identityID) { magazine in
-                                    NavigationLink {
-                                        ArticleConetntsList(magazine: magazine)
-                                            .environmentObject(modelData)
-                                    } label: {
-                                        MagazineCoverRow(magazine: magazine)
-                                            .frame(width: 200)
+        TabView {
+            NavigationView {
+                if magazines.isEmpty {
+                    ProgressView()
+                } else {
+                    List {
+                        VStack(alignment: .leading) {
+                            Text("Recent Issues".uppercased())
+                                .fontWeight(.bold)
+                                .padding([.leading, .top, .trailing])
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(alignment: .bottom, spacing: 14) {
+                                    ForEach(magazines.prefix(8), id: \.identityID) { magazine in
+                                        NavigationLink {
+                                            ArticleConetntsList(magazine: magazine)
+                                                .environmentObject(modelData)
+                                        } label: {
+                                            MagazineCoverRow(magazine: magazine)
+                                                .frame(width: 200)
+                                        }
                                     }
                                 }
+                                .padding([.leading, .trailing, .bottom])
                             }
-                            .padding([.leading, .trailing, .bottom])
+                        }
+                        .listRowInsets(EdgeInsets())
+                        
+                        VStack(alignment: .leading) {
+                            Text("Latest Stories".uppercased())
+                                .fontWeight(.bold)
+                                .padding([.leading, .top, .trailing])
+                            
+                            self.latestArticles
+                                .padding([.leading, .trailing])
+                        }
+                        .listRowInsets(EdgeInsets())
+                        .listRowSeparator(.hidden)
+                    }
+                    
+                    .listStyle(.plain)
+                    .navigationTitle("")
+                    .navigationBarTitleDisplayMode(.large)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            VStack(spacing: 0) {
+                                Text("Headlines")
+                                    .font(Font.custom("Georgia", size: 20))
+                            }
                         }
                     }
-                    .listRowInsets(EdgeInsets())
-                    
-                    VStack(alignment: .leading) {
-                        Text("Latest Stories".uppercased())
-                            .fontWeight(.bold)
-                            .padding([.leading, .top, .trailing])
-                        
-                        self.latestArticles
-                            .padding([.leading, .trailing])
+                    .refreshable {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                            self.modelData.fetchAllMagazines()
+                            self.modelData.fetchLatestMagazine()
+                        }
                     }
-                    .listRowInsets(EdgeInsets())
-                    .listRowSeparator(.hidden)
                 }
-                
-                .listStyle(.plain)
+            }
+            
+            #if !os(macOS)
+            .navigationViewStyle(.stack)
+            #endif
+            .onAppear {
+                self.modelData.fetchLatestMagazineURLs(urlString: databaseURL)
+                self.modelData.fetchLatestEposideMagazineURL(urlString: self.latestMagazineJSONURL)
+                self.modelData.fetchLatestMagazine()
+            }
+            .onChange(of: magazineURLs.count) { newValue in
+                if newValue > 0 {
+                    self.modelData.fetchAllMagazines()
+                }
+            }
+            .onChange(of: self.latestMagazineURL.count) { newValue in
+                if newValue > 0 {
+                    self.modelData.fetchLatestMagazine()
+                }
+            }
+            .onChange(of: self.latestMagazine.count) { newValue in
+                if newValue > 0 {
+                    self.modelData.fetchLatestArticles()
+                }
+            }
+            .tabItem {
+                Label("Latest", systemImage: "list.dash")
+            }
+            
+            NavigationView {
+                ScrollView {
+                    Divider()
+                    self.magazineListRow
+                }
                 .navigationTitle("")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .principal) {
-                        VStack(spacing: 0) {
-                            Text("THE")
-                                .font(Font.custom("Georgia", size: 10))
-                            Text("NEWS+")
-                                .font(Font.custom("Georgia", size: 20))
-                        }
-                    }
-                }
-                .refreshable {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                        self.modelData.fetchAllMagazines()
-                        self.modelData.fetchLatestMagazine()
+                        Text("Magazines")
+                            .font(Font.custom("Georgia", size: 20))
                     }
                 }
             }
-        }
-        
-        #if !os(macOS)
-        .navigationViewStyle(.stack)
-        #endif
-        .onAppear {
-            self.modelData.fetchLatestMagazineURLs(urlString: databaseURL)
-            self.modelData.fetchLatestEposideMagazineURL(urlString: self.latestMagazineJSONURL)
-            self.modelData.fetchLatestMagazine()
-        }
-        .onChange(of: magazineURLs.count) { newValue in
-            if newValue > 0 {
-                self.modelData.fetchAllMagazines()
-            }
-        }
-        .onChange(of: self.latestMagazineURL.count) { newValue in
-            if newValue > 0 {
-                self.modelData.fetchLatestMagazine()
-            }
-        }
-        .onChange(of: self.latestMagazine.count) { newValue in
-            if newValue > 0 {
-                self.modelData.fetchLatestArticles()
+            .tabItem {
+                Label("Magazines", systemImage: "doc.plaintext")
             }
         }
     }
@@ -163,6 +184,21 @@ extension MagazineList {
                 }
             }
         }
+    }
+    
+    @ViewBuilder
+    private var magazineListRow: some View {
+        LazyVGrid(columns: lanscapeGridItemLayout) {
+            ForEach(magazines, id: \.identityID) { magazine in
+                NavigationLink {
+                    ArticleConetntsList(magazine: magazine)
+                        .environmentObject(modelData)
+                } label: {
+                    MagazineCoverRow(magazine: magazine)
+                }
+            }
+        }
+        .padding([.leading, .trailing, .bottom])
     }
 }
 
