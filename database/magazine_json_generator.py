@@ -54,11 +54,11 @@ class MagazineJSON(object):
         return article_names
 
 if __name__ == "__main__":
-    magazineJSON = MagazineJSON(folder="2022-11-29")
-    magazineJSON.generator_magazine_json(coverStory="Mom said, ‘When love calls, go.’ So I traveled 7,260 miles for a first date",
-                                            date="November 29, 2022",
-                                            coverImageURL="https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/images/LAT.png",
-                                            id="00000000-0000-0000-0000-000000000007")
+    magazineJSON = MagazineJSON(folder="2022-11-27")
+    magazineJSON.generator_magazine_json(coverStory="The Search for a Pill That Can Help Dogs—and Humans—Live Longer",
+                                            date="November 27, 2022",
+                                            coverImageURL="https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/images/wired-2022-11.jpg",
+                                            id="00000000-0000-0000-0000-000000000008")
     # magazineJSON = MagazineJSON(folder="2022-11-28")
     # magazineJSON.generator_magazine_json(coverStory="“The Future Is Here,” by Birgit",
     #                                         date="November 28, 2022",
