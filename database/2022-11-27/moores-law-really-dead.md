@@ -1,0 +1,41 @@
+---
+title: Is Moore’s Law Really Dead?
+subtitle: A postmortem on “Cramming More Components Onto Integrated Circuits”—the most influential article of the 20th century.
+authorName: Virginia Heffernan
+coverImageURL: https://media.wired.com/photos/636ead1f627a555fd99f22f7/master/w_1920,c_limit/WI120122_ST_Heffernan_01.jpg
+coverImageDescription: PHOTOGRAPH BY SHAWN MICHAEL JONES
+hashTag: IDEAS
+publishDate: November 22, 2022
+---
+
+OHM’S LAW (V = IR) states that the voltage across a conductor is proportional to the current flowing through it. Hooke’s law (Fs = -kx) states that the force needed to extend or compress a spring by some distance is proportional to that distance. Moore’s law states—
+
+Well, that one doesn’t state. It wagers. It hazards a guess. It contains no constants, no special functions, no variables, no equations at all. Movie directors will find in Moore’s law nothing like the kind of pretty runes that John Nash or Ben Affleck might scrawl on a window with a wax pencil. In fact, Moore’s law is less a law than a flier, a bit of Johnson-era bookmaking. Every year (or two) for a decade—or so the “law” goes—engineers would maybe, probably, double the number of transistors they could stuff onto a silicon chip.
+
+Such was the bet of Gordon Moore, then the research director at the illustrious Fairchild Semiconductor, an outfit based in Sunnyvale, California, that in those days was known mostly as a division of the Fairchild Camera and Instrument Corporation. Electronics, a throwaway circular for the radio industry, picked up one of Moore’s reports for Fairchild and published it as “Cramming More Components Onto Integrated Circuits” on April 19, 1965.
+
+It was a hit. Prescient is too weak a word: “Integrated circuits will lead to such wonders as home computers, or at least terminals connected to a central computer, automatic controls for automobiles, and personal portable communications equipment.” Such wonders. The essay dates to a time when a computer costs $18,000 (around $170,000 today). To make one affordable for a household, let alone an individual, will take a miracle. Moore, who later cofounded Intel, gives the miracle a shove with his resounding vote of confidence in tech workers for whom “You can do it” turns into “You must do it” turns into “You will do it” turns into “It’s natural law.”
+
+“Cramming” in this way sweeps you up in a tide of inevitability. It’s only slightly too grand to say the essay recalls the Declaration of Independence. (“When in the course of human events” also makes revolution sound like natural law.) For a piece about integrated circuits, moreover, “Cramming” partakes of the marvelous-fantastic genre; nothing Moore predicts for the future—and that future is now—is anything less than riotously fun.
+
+Five years after the essay’s publication, Carver Mead, a renowned scientist who just this year won a tidy 100 million yen as the Kyoto Prize laureate, playfully dubbed its projections a law. Thus the standing orders to America’s postwar engineers became clear: Miniaturize transistors and reduce costs. A world of workers have applied themselves to this task ever since. As much as Moore’s skills as a would-be legislator, his infectious enthusiasm for semiconductors has inspired these decades of engineering commitment. “Cramming” is still well worth reading, especially if all you know of Moore’s law is the doubling thing. Not only is it vatic, robust, and refined at once, it’s a piece of prose without precedent, a speech act that brought into being a whole global economic sector.
+
+THE ESSAY’S STRENGTH lies in its bold, bullish copulative sentences that use “is” like an equal sign and land with absolute certainty. “The future of integrated electronics is the future of electronics itself.” Blammo. Some of the prose then sounds like a patriotic newsreel (“No American can have freedom and justice unless there is freedom and justice for all!!”) or like Johnson himself bucking up geopolitical spirits. In the very month that “Cramming” appeared, LBJ declared of Vietnam, “The only path of reasonable men is the path of peaceful settlement.”
+
+Then there is the essay’s central claim: “With unit cost falling as the number of components per circuit rises, by 1975 economics may dictate squeezing as many as 65,000 components on a single silicon chip.” In spite of the hedge (“may dictate”), the negative slope—in which the two variables, unit cost and number of components, are inversely related—has a rousing momentum to it.
+
+Elsewhere in the essay, Moore projects the exaggerated certitude of a pitch deck—or maybe a graduate student who’s trying to assure her doctoral supervisor that her research is coming along great. “Several approaches evolved,” Moore wrote, “including microassembly techniques for individual components, thin film structures and semiconductor integrated circuits. Each approach evolved rapidly and converged … Many researchers believe the way of the future to be a combination of the various approaches.” The profound appreciation of intellectual collaboration and convergence, which still rings through the semiconductor sector today, cannot have helped but leaven the mood of American scientists in the pre-moonwalk days, when the Soviets appeared to be winning the Space Race.
+
+At 1,875 words, “Cramming” is concise, as befits a polemic on compression. And then there’s that word cramming, from the Old English crammian, “to press something into something else.” So palpable, greedy, and carnal. It’s not when we’re in the mood for measurement but when we’re feeling recklessly indifferent to proportion and harmony that we cram things into our suitcases, our shoes, and our mouths. While the essay is in the slide-rule idiom of engineers, it also speaks to the gut. It’s a goad to biennial home-optimizing that recommends balling up more of your shit, stuffing it into an overfull closet. This is a useful reminder that even at the scale of microns—and now nanos—scientists are still beholden to the constraints of physical space, at least until the path of all reasonable men becomes the path of quantum.
+
+And quantum is the point. As a field of inquiry, quantum—or AI, or the metaverse—might not be so driven by the rhythm of Moore’s law. If you need another reason to read “Cramming,” consider this: Its diktat might be coming to an end.
+
+“MOORE’S LAW IS dead,” pronounced Jensen Huang, cofounder and CEO of Nvidia, in September, a few weeks before his company released its $1,600 RTX 4090 graphics card for gamers.
+
+For technologists like Huang who have their sights set on the wonders of GPUs, the imperative to shrink transistors and reduce costs has given way to an ambition to conduct quantum experiments and increase performance in the metaverse without regard to size or price.
+
+But the fact that Huang’s whole business model at Nvidia is still responsive to “Cramming,” nearly 50 years later, clinches the article’s status as the most influential essay of the 20th century. Lionel Trilling, sure, wrote “Authenticity and the Modern Unconscious” around the time of “Cramming,” and Wendell Berry’s “The Long-Legged House” is lovely. But did Trilling or Berry set the speedcore tempo for the global industry that animates the entire built universe?
+
+In 2005, realizing they lacked an original copy of “Cramming,” Intel executives offered $10,000 on eBay for a mint copy of the relevant issue of Electronics. At last, an engineer in Surrey, UK, found one under his floorboards. The enchanted pages now sit in climate-controlled splendor in Intel’s museum—the tech world’s Book of Kells.
+
+The last phase of Moore’s essay is a delight. Having delivered his whopping projection of 65,000 elements per chip—it’s now 11.8 billion—Moore finally drops a statement of the purest trust in technology: “I believe that such a large circuit can be built on a single wafer.” Who would want to contradict Moore’s idealism? Such expansive affirmations of belief, with a reference to a Communion-like wafer. No wonder “Cramming” anchors the liturgy of the semiconductor business. In science, laws obtain. In tech, it’s mostly faith.

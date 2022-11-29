@@ -1,0 +1,34 @@
+---
+title: What Modern Humans Can Learn From Ancient Software
+subtitle: Retrocomputing is about more than nostalgic nerdery. It’s also a way to keep your tech in perspective.
+authorName: Paul Ford
+coverImageURL: https://media.wired.com/photos/630fa99379f10149f7bb9e38/master/w_1920,c_limit/WI100122_ST_Ford_01.jpg
+coverImageDescription: ILLUSTRATION BY ELENA LACEY
+hashTag: IDEAS
+publishDate: September 15, 2022
+---
+
+DID YOU KNOW that you can, right now, for free, go to Archive.org, the great online library of all things, and load up within your web browser an ancient, decrepit emulated computer—a DOS box from 1991, a black-and-white Mac, a green-and-black Apple II—and run the WordPerfect of yore, boot old HyperCard stacks, or use 1979’s VisiCalc as God intended?
+
+Perhaps this does not seem miraculous to you. Fair. Moore’s law has taken us from 250 billion or so CPU churns per year on the earliest Macs to a quintillion potential clock cycles on a good gaming PC, a healthy 4,000,000X increase. Anyone with sense might reasonably ask, What? Why use a shiny new computer to run old spreadsheets? And I might nod and shrug, but inside I am a translucent plastic iMac of emotion. Because it is, I think, important to emulate.
+
+You can learn history by reading books and visiting museums; you might even walk a battlefield. But you can’t understand software from screenshots any more than you can understand music from album reviews, or baseball from box scores, or Rome from watching gladiator movies, much as you might enjoy gladiator movies. When you boot up a virtual version of a Macintosh from 30 years ago, you share in the lived experiences of millions of ancient humans. You can see how they spent their paltry CPU budget to fill their low-resolution screens.
+
+You learn their priorities. They started batch processing, running programs as lumps of code, but as soon as CPUs allowed, they made them interactive, alive. Even if those were just green numbers on a screen, à la VisiCalc. As soon as they could, early users went post-textual, pictographic—pointing at things with the mouse, Spartan virtue abandoned for Athenian excess. Later, in Moore’s glut, we spent new CPU cycles on color or networking or sound, progressing from beeps to playing CDs to MP3s.
+
+Emulation reminds me to ask myself whether the computing experience is always getting better. I’m writing this in Google Docs so my editor’s little round avatar head can peek in and make sure I don’t miss my deadline for once, but I’d prefer to write it in WordPerfect 5.1 for DOS, which was the greatest word processor ever—a blank screen illuminated with only letters and numbers, offering just enough bold and italics to keep things interesting. I remember WP51 the way a non-nerd might remember a vintage Mustang. You could just take that thing out and go, man.
+
+But it’s more than a museum trip for self-enrichment. Emulation forces me to strip back to basics—to remember that, for most people, computers are tools, not a lifestyle. Whenever I buy a computer, one of the first things I do is set up my software emulation environments, which now involve about a terabyte of old disk images and various operating systems. Keeping that history so close helps me accept the horrible truth that everything novel in our industry was actually invented by a group of Californians sitting in beanbag chairs during the Carter administration. What seems permanent today is as fleeting as, well, Twitter’s Fleets. GAFA becomes FAANG becomes MAMAA. There will be new acronyms before long.
+
+> I recall WordPerfect 5.1 the way a non-nerd might recall a vintage Mustang. You could just take that thing out and go, man.
+
+RECENTLY, I MADE the jump from software-based emulation to specialized hardware. I bought a little black metal box, the size of three packs of playing cards, that contains what’s called a field-programmable gate array—shape-shifter circuitry that takes on characteristics of other devices. It’s purely for simulation of retro machines, including the Commodores Amiga and 64, Atari STs, 486s, and various gaming platforms, which for most people are the main event (Neo Geos, Game Boys, Atari Lynx, all the way back to Spacewar! on the PDP-1).
+
+The box is called the MiSTer. It’s not a consumer product but rather a folk-created reference platform: If you buy these parts and assemble them, then download some free software and plug in an HDMI card, it becomes an old machine. For this privilege one pays around $600. It gives me the same joy I imagine people who are into expensive headphones or collect vintage vinyl feel—that sense of something being more real. The cores simulate everything, all the little glitches and weirdnesses and timings that make a chip a chip, that make the mouse move like you remember. Watching old code run on a modern big, sharp screen is hyperreal. Like a Proustian madeleine, but made by Cinnabon.
+
+It’s exciting to see this kind of progress in simulating old computers. We throw away so much history in our field, acres of dumpsters filled with old manuals and disks. Why are we so cavalier about computing history? (Not the Internet Archive; they scan in all the old manuals, bless them.) Are we ashamed? People made that stuff, all of it, people like you and me, just a little older and working in much slower development environments.
+
+I have a musician friend, an actually cool person who has done cool things like DJ in Europe, and we talk a great deal about synthesizers. I think of synths as computers that have their priorities straight: Hit a key and a noise comes out. In a synth (or sequencer or drum machine), genealogy is valuable. New models are supposed to carry on the legacy of the ones that came before. People want their cowbell to sound like the cowbell. Purchasing a synth is about joining a lineage, aligning your sound with that of thousands of people who’ve used similar machines. I guess that’s the difference between culture and marketing.
+
+Watching synth heads proudly talk about every machine from the 1970s—well, honestly, it’s a lot. But it’s interesting to observe a subculture that wants continuity more than disruption. In my perfect world, every machine would come with a few emulated versions of its predecessors, ready to go, right on the disk. There’s plenty of room. No one would need to set anything up or buy a special device. And that way everyone could see how incredibly far we’ve come, and how surprisingly little we change.
+
