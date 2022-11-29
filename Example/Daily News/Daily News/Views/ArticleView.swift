@@ -156,7 +156,7 @@ struct ArticleView: View {
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
         ArticleView(currentArticle: Article(
-            title: "A Murder Roils the Cycling World", subtitle: "In gravel racing—the sport’s hottest category—the killing has exposed a lot of dirt.", coverImageURL: "imageURL", contents: [], coverImageWidth: 500, coverImageHeight: 500, hashTag: "A Reporter at Large", authorName: "author name", coverImageDescription: "cover image description", publishDate: "publish date"))
+            title: "A Murder Roils the Cycling World", subtitle: "In gravel racing—the sport’s hottest category—the killing has exposed a lot of dirt.", coverImageURL: "https://www.economist.com/img/b/1424/801/90/media-assets/image/20221126_EUD000.jpg", contents: [Content(role: "link", resourcelink: "https://twitter.com/ShiningNikki_SN/status/1595598075732627456?s=20&t=20qUyKoFQtEylFOvbH1WkA")], coverImageWidth: 500, coverImageHeight: 500, hashTag: "A Reporter at Large", authorName: "author name", coverImageDescription: "cover image description", publishDate: "publish date"))
         .environmentObject(ModelData())
     }
 }
@@ -260,6 +260,14 @@ extension ArticleView {
                 Spacer()
             }
             .frame(maxWidth: self.maxWidth)
+        case .link:
+            if let resourcelink = content.resourcelink {
+                if let url = URL(string: resourcelink) {
+                    LinkView(previewURL: url)
+                        .aspectRatio(contentMode: .fit)
+                        .padding()
+                }
+            }
         }
     }
     

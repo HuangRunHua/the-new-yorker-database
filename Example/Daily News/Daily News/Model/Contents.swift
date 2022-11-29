@@ -19,6 +19,7 @@ struct Content: Identifiable, Codable {
     var imageWidth: Double?
     var imageHeight: Double?
     var imageDescription: String?
+    var resourcelink: String?
     
     public enum Role: String {
         case quote = "quote"
@@ -26,6 +27,7 @@ struct Content: Identifiable, Codable {
         case image = "image"
         case head = "head"
         case second = "second"
+        case link = "link"
     }
     
     var contentRole: Role {
