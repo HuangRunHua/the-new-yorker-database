@@ -15,6 +15,8 @@ struct MagazineList: View {
     
     @EnvironmentObject var modelData: ModelData
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var magazineURLs: [MagazineURL] {
         return modelData.magazineURLs
     }
@@ -41,6 +43,12 @@ struct MagazineList: View {
     private let thumbnailWidth: CGFloat = 50
     private let thumbnailCornerRadius: CGFloat = 5
     
+    enum Tab: Int {
+        case latest, magazine
+    }
+        
+    @State private var selectedTab = Tab.latest
+    
     var body: some View {
         self.magazineList
     }
@@ -55,112 +63,36 @@ struct MagazineList_Previews: PreviewProvider {
 
 extension MagazineList {
     private var magazineList: some View {
-        TabView {
-            NavigationView {
-                if magazines.isEmpty {
-                    ProgressView()
-                } else {
-                    List {
-                        VStack(alignment: .leading) {
-                            Text("Recent Issues".uppercased())
-                                .fontWeight(.bold)
-                                .padding([.leading, .top, .trailing])
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack(alignment: .bottom, spacing: 14) {
-                                    ForEach(magazines.prefix(8), id: \.identityID) { magazine in
-                                        NavigationLink {
-                                            ArticleConetntsList(magazine: magazine)
-                                                .environmentObject(modelData)
-                                        } label: {
-                                            MagazineCoverRow(magazine: magazine)
-                                                .frame(width: 200)
-                                        }
-                                    }
-                                }
-                                .padding([.leading, .trailing, .bottom])
-                            }
-                        }
-                        .listRowInsets(EdgeInsets())
-                        
-                        VStack(alignment: .leading) {
-                            Text("Latest Stories".uppercased())
-                                .fontWeight(.bold)
-                                .padding([.leading, .top, .trailing])
-                            
-                            self.latestArticles
-                                .padding([.leading, .trailing])
-                        }
-                        .listRowInsets(EdgeInsets())
-                        .listRowSeparator(.hidden)
-                    }
-                    
-                    .listStyle(.plain)
-                    .navigationTitle("")
-                    .navigationBarTitleDisplayMode(.large)
-                    .toolbar {
-                        ToolbarItem(placement: .principal) {
-                            VStack(spacing: 0) {
-                                Text("Headlines")
-                                    .font(Font.custom("Georgia", size: 20))
-                            }
-                        }
-                    }
-                    .refreshable {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                            self.modelData.fetchAllMagazines()
-                            self.modelData.fetchLatestMagazine()
-                        }
-                    }
+        VStack(spacing: 0) {
+            ZStack {
+                if self.selectedTab == .latest {
+                    self.latestTabView
                 }
-            }
-            
-            #if !os(macOS)
-            .navigationViewStyle(.stack)
-            #endif
-            .onAppear {
-                self.modelData.fetchLatestMagazineURLs(urlString: databaseURL)
-                self.modelData.fetchLatestEposideMagazineURL(urlString: self.latestMagazineJSONURL)
-                self.modelData.fetchLatestMagazine()
-            }
-            .onChange(of: magazineURLs.count) { newValue in
-                if newValue > 0 {
-                    self.modelData.fetchAllMagazines()
+                else if self.selectedTab == .magazine {
+                    self.magazineTabView
                 }
-            }
-            .onChange(of: self.latestMagazineURL.count) { newValue in
-                if newValue > 0 {
-                    self.modelData.fetchLatestMagazine()
-                }
-            }
-            .onChange(of: self.latestMagazine.count) { newValue in
-                if newValue > 0 {
-                    self.modelData.fetchLatestArticles()
-                }
-            }
-            .tabItem {
-                Label("Latest", systemImage: "list.dash")
-            }
-            
-            NavigationView {
-                ScrollView {
-                    Divider()
-                    self.magazineListRow
-                }
-                .navigationTitle("")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Text("Magazines")
-                            .font(Font.custom("Georgia", size: 20))
-                    }
-                }
-            }
-            .tabItem {
-                Label("Magazines", systemImage: "doc.plaintext")
             }
         }
     }
      
+    
+    var tabBarView: some View {
+        VStack(spacing: 0) {
+            Divider()
+                .foregroundColor(.gray)
+            
+            HStack(spacing: 20) {
+                Spacer()
+                tabBarItem(.latest, title: "Latest", icon: "list.dash")
+                Spacer()
+                tabBarItem(.magazine, title: "Magazines", icon: "doc.plaintext.fill")
+                Spacer()
+            }
+            .padding(.top, 8)
+        }
+        .frame(height: 50)
+        .background(Color.tabColor.edgesIgnoringSafeArea(.all))
+    }
     
     @ViewBuilder
     private var latestArticles: some View {
@@ -200,6 +132,140 @@ extension MagazineList {
         }
         .padding([.leading, .trailing, .bottom])
     }
+    
+    @ViewBuilder
+    private var magazineTabView: some View {
+        NavigationView {
+            VStack(spacing: 0) {
+                ScrollView {
+                    Divider()
+                    self.magazineListRow
+                }
+                .navigationTitle("")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Text("Magazines")
+                            .font(Font.custom("Georgia", size: 20))
+                    }
+                }
+                
+                self.tabBarView
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private var latestTabView: some View {
+        NavigationView {
+            if magazines.isEmpty {
+                ProgressView()
+            } else {
+                VStack(spacing: 0) {
+                    List {
+                        VStack(alignment: .leading) {
+                            Text("Recent Issues".uppercased())
+                                .fontWeight(.bold)
+                                .padding([.leading, .top, .trailing])
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(alignment: .bottom, spacing: 14) {
+                                    ForEach(magazines.prefix(8), id: \.identityID) { magazine in
+                                        NavigationLink {
+                                            ArticleConetntsList(magazine: magazine)
+                                                .environmentObject(modelData)
+                                        } label: {
+                                            MagazineCoverRow(magazine: magazine)
+                                                .frame(width: 200)
+                                        }
+                                    }
+                                }
+                                .padding([.leading, .trailing, .bottom])
+                            }
+                        }
+                        .listRowInsets(EdgeInsets())
+                        
+                        VStack(alignment: .leading) {
+                            Text("Latest Stories".uppercased())
+                                .fontWeight(.bold)
+                                .padding([.leading, .top, .trailing])
+                            
+                            self.latestArticles
+                                .padding([.leading, .trailing])
+                        }
+                        .padding(.bottom)
+                        .listRowInsets(EdgeInsets())
+                        .listRowSeparator(.hidden)
+                    }
+                    
+                    .listStyle(.plain)
+                    .navigationTitle("")
+                    .navigationBarTitleDisplayMode(.large)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            VStack(spacing: 0) {
+                                Text("Headlines")
+                                    .font(Font.custom("Georgia", size: 20))
+                            }
+                        }
+                    }
+                    .refreshable {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                            self.modelData.fetchAllMagazines()
+                            self.modelData.fetchLatestMagazine()
+                        }
+                    }
+                    
+                    self.tabBarView
+                }
+            }
+        }
+        
+        #if !os(macOS)
+        .navigationViewStyle(.stack)
+        #endif
+        .onAppear {
+            self.modelData.fetchLatestMagazineURLs(urlString: databaseURL)
+            self.modelData.fetchLatestEposideMagazineURL(urlString: self.latestMagazineJSONURL)
+            self.modelData.fetchLatestMagazine()
+        }
+        .onChange(of: magazineURLs.count) { newValue in
+            if newValue > 0 {
+                self.modelData.fetchAllMagazines()
+            }
+        }
+        .onChange(of: self.latestMagazineURL.count) { newValue in
+            if newValue > 0 {
+                self.modelData.fetchLatestMagazine()
+            }
+        }
+        .onChange(of: self.latestMagazine.count) { newValue in
+            if newValue > 0 {
+                self.modelData.fetchLatestArticles()
+            }
+        }
+    }
+    
+    
+    func tabBarItem(_ tab: Tab, title: String, icon: String) -> some View {
+            ZStack(alignment: .topTrailing) {
+                VStack(spacing: 3) {
+                    VStack {
+                        Image(systemName: icon)
+                            .font(.system(size: 24))
+                            .foregroundColor(selectedTab == tab ? .accentColor : .gray)
+                    }
+                    .frame(width: 55, height: 28)
+                    
+                    Text(title)
+                        .font(.system(size: 11))
+                        .foregroundColor(selectedTab == tab ? .accentColor : .gray)
+                }
+            }
+            .frame(width: 65, height: 42)
+            .onTapGesture {
+                selectedTab = tab
+            }
+        }
 }
 
 

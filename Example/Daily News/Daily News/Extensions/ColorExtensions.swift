@@ -12,4 +12,5 @@ extension Color {
     static let cloudColor = Color("cloudColor")
     static let hashtagColor = Color("hashtagColor")
     static let cardColor = Color("cardColor")
+    static let tabColor = Color("tabColor")
 }
