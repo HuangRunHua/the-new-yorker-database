@@ -57,16 +57,18 @@ struct ArticleView: View {
                         Spacer()
                     }
                 }
-                HStack {
-                    Text(self.currentArticle.subtitle)
-                        .font(Font.custom("Georgia", size: 20))
-                        .textSelection(.enabled)
-                        .contextMenu(ContextMenu(menuItems: {
-                            Button("Translate", action: {
-                                self.translateText = self.currentArticle.subtitle
-                            })
-                        }))
-                    Spacer()
+                if self.currentArticle.subtitle != "" {
+                    HStack {
+                        Text(self.currentArticle.subtitle)
+                            .font(Font.custom("Georgia", size: 20))
+                            .textSelection(.enabled)
+                            .contextMenu(ContextMenu(menuItems: {
+                                Button("Translate", action: {
+                                    self.translateText = self.currentArticle.subtitle
+                                })
+                            }))
+                        Spacer()
+                    }
                 }
             }
             .multilineTextAlignment(.leading)

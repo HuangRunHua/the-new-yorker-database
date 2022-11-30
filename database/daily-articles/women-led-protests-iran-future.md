@@ -1,0 +1,39 @@
+---
+title: What the Success of Women-Led Protests Tell Us About Iran’s Future
+subtitle: Historically, these kinds of protests are more inclusive, innovative, and more likely to achieve their goals.
+authorName: Yasmeen Serhan
+coverImageURL: https://api.time.com/wp-content/uploads/2022/11/GettyImages-1244430868.jpg
+coverImageDescription: 
+hashTag: World
+publishDate: November 10, 2022
+---
+
+The traditional mourning period in Iran lasts 40 days. Since the widespread national protests began nearly two months ago following the death of Mahsa Amini—the young Kurdish Iranian woman who fell into a coma after being allegedly beaten by Tehran’s so-called “morality police” over her purported failure to properly veil her hair—the period of mourning in the country hasn’t ceased. At least 328 Iranians have died in the protests, according to the Tehran-based Human Rights Activists News Agency (HRANA).
+
+But what began as an outpouring of grief over Amini’s death has evolved into a transformative national movement. The predominantly women- and youth-led demonstrations and their clarion call for “woman, life, liberty” have touched nearly every corner of Iranian society. Despite the violent crackdowns by Iranian security forces resulting in hundreds of deaths and thousands of arrests, there are no signs of the movement’s momentum abating anytime soon.
+
+That protests principally led by and for women could persist for this long would have been previously unthinkable in Iran, which has for decades been ruled under the iron fist of its Supreme Leader Ali Khamenei. The country is one of the world’s worst performing countries for gender parity. While Iranian women have a long history of political activism and mobilization in the country, they rarely feature at the center of those movements. Today, Iranian women are not only at the forefront of the ongoing protests, but they are also behind its central demands—namely, the downfall of the regime.
+
+But the centrality of women in these protests matter for reasons that go beyond representation or equality. That’s because, according to scholars of civil resistance, high levels of women participation tend to make mass movements more inclusive, innovative, nonviolent, and, crucially, more likely to achieve their goals. The prevailing question facing Iran is whether these protests will prove to be representative of, or the exception to, that rule.
+
+For Iran, the centrality of women in the ongoing protests was not a matter of design so much as a consequence of circumstance. Since the establishment of the Islamic Republic in 1979, women’s rights in the country have been continuously curtailed—notably, though not exclusively, through the imposition of strict dress code rules, including compulsory hijabs for women in public. While Iranian women have previously sought to remedy their situation by backing reformist candidates and campaigns, those efforts were largely futile in bringing about substantive change. That women emerged as the primary mobilizers behind the current protests comes down to the fact that “women just had so much more to lose,” says Mona Tajali, an Iranian scholar of gender and politics in Muslim contexts.
+
+While the Islamic Republic has seen larger demonstrations—notably the Green Movement of 2009, in which millions protested state-sponsored vote rigging—it hasn’t seen a movement as seemingly widespread or as demographically diverse as this one. The ongoing protests have spread to as many as 138 cities, according to HRANA, including areas once considered regime strongholds. And while the protests continue to center on the rights and demands of women, their calls for change are being echoed by larger swathes of the Iranian public than ever before, including university students, workers’ unions, and ethnic minority groups. While there are other grievances at play—not least suffocating social restrictions, a collapsing economy, and widespread repression—their opposition to the regime is shared.
+
+“This is one of the first times that we’re seeing men also join in that call,” says Tajali. “They are seeing that women’s interests and their demands for gender equality and non-gender discrimination falls in line with the larger pro-democratic, pro-human rights demands that the larger society has. It’s much more intersectional.”
+
+The diversity of the demonstrators is in many ways a direct consequence of the widespread participation of women, who form half the population and come from all walks of life. Movements that involve many women are also more likely to utilize innovative and nonviolent methods that go beyond street protests, including in Iran cutting their hair (a cultural practice with ties to mourning and protests against injustice) and burning their headscarves, as well as more tactical universal methods such as boycotts and strikes. It also helps that women-led movements tend to be more difficult to suppress with brute force (though this certainly hasn’t stopped regime security forces from trying).
+
+“It’s the ordinariness of women’s participation that has all of these knock-on effects,” says Zoe Marks, an expert on non-violent mass movements at the Harvard University’s Kennedy School of Government. “There is more tactical creativity, there are more ties to society because women have all of these social relationships and resources that are slightly different than men’s social and professional relationships and resources.”
+
+Most notably, Marks adds, is that movements that heavily feature women are also more likely to lead to defections among both members and supporters of a regime, in large part because women often bring more legitimacy and sympathy to these movements.
+
+While there have been reports of divisions among lawmakers over the security forces’ violent crackdowns, “it seems as of now that [those within] the regime are unified, at least publicly,” says Fatemeh Haghighatjoo, a women’s rights advocate and former lawmaker in Iran who resigned in 2004 following a crackdown on reformists such as herself. Meanwhile, the government has doubled down on its position: refusing to enact reforms and claiming that the protests are a foreign plot.
+
+“The Iranian regime, ever since 1979, has been quite tone deaf to people’s demands,” says Tajali, “and this has been one of the fundamental reasons and justifications for why people just want to see the downfall of the system.”
+
+As some Iranians see it, these protests mark an inflection point. Irrespective of whether they achieve their aims, the country has already been transformed by them. Yet what comes next is less clear. One of the biggest challenges facing these protests is not only bringing about the downfall of the regime, but articulating a vision for the kind of government that can replace it. “We don’t have unified leadership in and outside of the country and this is a big weakness,” says Haghighatjoo.
+
+Perhaps the worst-case scenario for these protests is that the situation in Iran doesn’t just return to the status quo, but that it ultimately gets worse. “Our research shows that when movements do not achieve their maximum objective and there’s been extensive women’s participation, there’s almost always a regression or a backlash in gender equity and democracy after the movement ends,” says Marks, citing the examples of Turkey and Russia. Even though movements are more likely to succeed with women participating in large numbers, “there is still a significant minority of movements that, even with over 50% female participation, fail.”
+
+But as Haghighatjoo and many others see it, the revolutionary mood in Iran is unlikely to be quelled, even if the protests are. “Most people who experienced the 1979 revolution say this condition is like 1978, the year leading to the revolution,” she says. “I am hopeful that people will succeed. But it may take a couple of years.”

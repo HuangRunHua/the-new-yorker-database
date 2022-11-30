@@ -55,11 +55,20 @@ class MagazineJSON(object):
 
 if __name__ == "__main__":
 
-    magazineJSON = MagazineJSON(folder="2022-12-04")
+    """
+    Daily articles update.
+    """
+    magazineJSON = MagazineJSON(folder="daily-articles")
     magazineJSON.generator_magazine_json(coverStory="“Off-Season,” by Jorge Colombo.",
                                             date="December 4, 2022",
                                             coverImageURL="https://media.newyorker.com/photos/637d0d8fce333787da27bbc6/master/w_760,c_limit/2022_12_05.jpg",
-                                            id="00000000-0000-0000-0000-000000000010")
+                                            id="10000000-0000-0000-0000-000000000000")
+
+    # magazineJSON = MagazineJSON(folder="2022-12-04")
+    # magazineJSON.generator_magazine_json(coverStory="“Off-Season,” by Jorge Colombo.",
+    #                                         date="December 4, 2022",
+    #                                         coverImageURL="https://media.newyorker.com/photos/637d0d8fce333787da27bbc6/master/w_760,c_limit/2022_12_05.jpg",
+    #                                         id="00000000-0000-0000-0000-000000000010")
 
     # magazineJSON = MagazineJSON(folder="2022-12-05")
     # magazineJSON.generator_magazine_json(coverStory="Steven Spielberg Waited 60 Years to Tell This Story",
