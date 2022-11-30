@@ -39,7 +39,8 @@ class DatabaseJSON(object):
         eposide_names = [
             absolute_path.split("/")[-1] 
             for absolute_path in glob.glob(absolute_folder_path)
-            if (not "." in absolute_path.split("/")[-1]) and (absolute_path.split("/")[-1][0:2] != "__")
+            if (not "." in absolute_path.split("/")[-1]) and (absolute_path.split("/")[-1][0:2] != "__") and
+            (absolute_path.split("/")[-1] != "images") and (absolute_path.split("/")[-1] != "daily-articles")
         ]
         return eposide_names
 
