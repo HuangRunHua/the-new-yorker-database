@@ -13,7 +13,10 @@ struct MagazineList: View {
     
     private let latestMagazineJSONURL: String = "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/latest.json"
     
+    private let dailyArticlesJSONURL: String = "https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/daily-articles.json"
+    
     @EnvironmentObject var modelData: ModelData
+    @EnvironmentObject var dailyArticleModelData: DailyArticleModelData
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -30,8 +33,16 @@ struct MagazineList: View {
         return modelData.latestMagazine
     }
     
+    var dailyArticleMagazine: [Magazine] {
+        return dailyArticleModelData.latestMagazine
+    }
+    
     var latestMagazineURL: [LatestMagazineURL] {
         return modelData.latestMagazineURL
+    }
+    
+    var dailyArticleMagazineURL: [LatestMagazineURL] {
+        return dailyArticleModelData.latestMagazineURL
     }
     
     private let gridItemLayout = [GridItem(.flexible())]
@@ -44,7 +55,7 @@ struct MagazineList: View {
     private let thumbnailCornerRadius: CGFloat = 5
     
     enum Tab: Int {
-        case latest, magazine
+        case latest, magazine, daily
     }
         
     @State private var selectedTab = Tab.latest
@@ -58,6 +69,7 @@ struct MagazineList_Previews: PreviewProvider {
     static var previews: some View {
         MagazineList()
             .environmentObject(ModelData())
+            .environmentObject(DailyArticleModelData())
     }
 }
 
@@ -70,6 +82,9 @@ extension MagazineList {
                 }
                 else if self.selectedTab == .magazine {
                     self.magazineTabView
+                }
+                else if self.selectedTab == .daily {
+                    self.dailyArticles
                 }
             }
         }
@@ -84,6 +99,8 @@ extension MagazineList {
             HStack(spacing: 20) {
                 Spacer()
                 tabBarItem(.latest, title: "Latest", icon: "list.dash")
+                Spacer()
+                tabBarItem(.daily, title: "Daily", icon: "list.dash")
                 Spacer()
                 tabBarItem(.magazine, title: "Magazines", icon: "doc.plaintext.fill")
                 Spacer()
@@ -114,6 +131,55 @@ extension MagazineList {
                         }
                     }
                 }
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private var dailyArticles: some View {
+        NavigationView {
+                if self.dailyArticleModelData.latestArticles.isEmpty {
+                    VStack(spacing: 0) {
+                        HStack {
+                            Spacer()
+                            ProgressView()
+                            Spacer()
+                        }
+                        Spacer()
+                        self.tabBarView
+                    }
+                    
+                } else {
+                    VStack(spacing: 0) {
+                        ScrollView(showsIndicators: false) {
+                            VStack {
+                                ForEach(self.dailyArticleModelData.latestArticles) { article in
+                                    NavigationLink {
+                                        ArticleView(currentArticle: article)
+                                            .environmentObject(dailyArticleModelData)
+                                    } label: {
+                                        ArticleContentRow(currentArticle: article)
+                                    }
+                                }
+                            }
+                            .padding(.bottom)
+                        }
+                        self.tabBarView
+                    }
+                }
+        }
+        .onAppear {
+            self.dailyArticleModelData.fetchLatestEposideMagazineURL(urlString: self.dailyArticlesJSONURL)
+            self.dailyArticleModelData.fetchLatestMagazine()
+        }
+        .onChange(of: self.dailyArticleMagazineURL.count) { newValue in
+            if newValue > 0 {
+                self.dailyArticleModelData.fetchLatestMagazine()
+            }
+        }
+        .onChange(of: self.dailyArticleMagazine.count) { newValue in
+            if newValue > 0 {
+                self.dailyArticleModelData.fetchLatestArticles()
             }
         }
     }
@@ -226,7 +292,9 @@ extension MagazineList {
         .onAppear {
             self.modelData.fetchLatestMagazineURLs(urlString: databaseURL)
             self.modelData.fetchLatestEposideMagazineURL(urlString: self.latestMagazineJSONURL)
+//            self.dailyArticleModelData.fetchLatestEposideMagazineURL(urlString: self.dailyArticlesJSONURL)
             self.modelData.fetchLatestMagazine()
+//            self.dailyArticleModelData.fetchLatestMagazine()
         }
         .onChange(of: magazineURLs.count) { newValue in
             if newValue > 0 {
@@ -236,11 +304,13 @@ extension MagazineList {
         .onChange(of: self.latestMagazineURL.count) { newValue in
             if newValue > 0 {
                 self.modelData.fetchLatestMagazine()
+//                self.dailyArticleModelData.fetchLatestMagazine()
             }
         }
         .onChange(of: self.latestMagazine.count) { newValue in
             if newValue > 0 {
                 self.modelData.fetchLatestArticles()
+//                self.dailyArticleModelData.fetchLatestArticles()
             }
         }
     }

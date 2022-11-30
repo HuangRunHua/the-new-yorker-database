@@ -20,7 +20,6 @@ final class ModelData: ObservableObject, Decodable {
     @Published var latestMagazine: [Magazine] = []
     @Published var latestArticles: [Article] = []
     
-    @Published var homeArticles: [Article] = []
     
     enum CodingKeys: CodingKey {
         case magazineURLs
@@ -114,16 +113,6 @@ final class ModelData: ObservableObject, Decodable {
             for article in latestMagazine.articles.sorted(by: { $0.id < $1.id}) {
                 _fetchLatestArticle(urlString: article.articleURL)
             }
-        }
-    }
-    
-    func fetchHomeLatestArticles() {
-        self.homeArticles = []
-        if let latestMagazine = self.latestMagazine.first {
-//            print("==========")
-//            for article in latestMagazine.articles.sorted(by: { $0.id < $1.id}) {
-//                _fetchLatestArticle(urlString: article.articleURL)
-//            }
         }
     }
     
