@@ -59,7 +59,6 @@ class MagazineGenerator(object):
             article[info[0]] = info[1]
             """Fetch the cover image size"""
             if "coverImageURL" in article:
-                # if article["coverImageURL"] != "":
                 cover_image_size = ImageAnalyzer.get_image_size(url=article["coverImageURL"])
                 article["coverImageWidth"] = cover_image_size[0]
                 article["coverImageHeight"] = cover_image_size[1]
@@ -87,6 +86,9 @@ class MagazineGenerator(object):
             elif content[0:3] == "## ":
                 parsed_content["role"] = "second"
                 parsed_content["text"] = content[3:]
+            elif content[0:2] == "->":
+                parsed_content["role"] = "link"
+                parsed_content["text"] = content[2:]
             else:
                 parsed_content["role"] = "body"
                 parsed_content["text"] = content
@@ -125,7 +127,7 @@ class MagazineGenerator(object):
 
 
 if __name__ == "__main__":
-    article_analyzer = MagazineGenerator(folder="2022-11-27")
+    article_analyzer = MagazineGenerator(folder="2022-12-05")
     # article_analyzer = MagazineGenerator(folder="2022-11-22")
     # article_analyzer = MagazineGenerator(folder="2022-11-21")
     # article_analyzer = MagazineGenerator(folder="2022-11-14")
