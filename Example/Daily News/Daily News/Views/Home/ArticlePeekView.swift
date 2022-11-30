@@ -46,6 +46,7 @@ struct ArticlePeekView: View {
                 Text(self.currentArticle.title)
                     .font(Font.custom("Georgia", size: 30))
                     .multilineTextAlignment(.leading)
+                    .foregroundColor(.defaultFontColor)
                 Spacer()
             }
             
@@ -54,11 +55,16 @@ struct ArticlePeekView: View {
                     Text(self.currentArticle.subtitle)
                         .font(Font.custom("Georgia", size: 18))
                         .multilineTextAlignment(.leading)
+                        .foregroundColor(.defaultFontColor)
                     Spacer()
                 }
                 .padding(.top, -7)
             }
+            Divider()
+                .foregroundColor(.gray)
         }
+        .padding([.leading, .trailing])
+        .padding(.bottom)
     }
 }
 

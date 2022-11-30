@@ -58,7 +58,7 @@ struct MagazineList: View {
         case latest, magazine, daily
     }
         
-    @State private var selectedTab = Tab.latest
+    @State private var selectedTab = Tab.daily
     
     var body: some View {
         self.magazineList
@@ -98,9 +98,10 @@ extension MagazineList {
             
             HStack(spacing: 20) {
                 Spacer()
-                tabBarItem(.latest, title: "Latest", icon: "list.dash")
+                tabBarItem(.daily, title: "Latest", icon: "newspaper.fill")
                 Spacer()
-                tabBarItem(.daily, title: "Daily", icon: "list.dash")
+                tabBarItem(.latest, title: "Stories", icon: "list.dash")
+                
                 Spacer()
                 tabBarItem(.magazine, title: "Magazines", icon: "doc.plaintext.fill")
                 Spacer()
@@ -140,6 +141,7 @@ extension MagazineList {
         NavigationView {
                 if self.dailyArticleModelData.latestArticles.isEmpty {
                     VStack(spacing: 0) {
+                        Spacer()
                         HStack {
                             Spacer()
                             ProgressView()
@@ -151,20 +153,32 @@ extension MagazineList {
                     
                 } else {
                     VStack(spacing: 0) {
-                        ScrollView(showsIndicators: false) {
+                        ScrollView(showsIndicators: true) {
+                            Divider()
                             VStack {
                                 ForEach(self.dailyArticleModelData.latestArticles) { article in
                                     NavigationLink {
                                         ArticleView(currentArticle: article)
                                             .environmentObject(dailyArticleModelData)
                                     } label: {
-                                        ArticleContentRow(currentArticle: article)
+                                        ArticlePeekView(currentArticle: article)
                                     }
                                 }
                             }
                             .padding(.bottom)
                         }
                         self.tabBarView
+                    }
+                    .listStyle(.plain)
+                    .navigationTitle("")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            VStack(spacing: 0) {
+                                Text("Headlines")
+                                    .font(Font.custom("Georgia", size: 20))
+                            }
+                        }
                     }
                 }
         }
@@ -219,13 +233,27 @@ extension MagazineList {
                 self.tabBarView
             }
         }
+        .onAppear {
+            self.modelData.fetchLatestMagazineURLs(urlString: databaseURL)
+            self.modelData.fetchLatestMagazine()
+        }
+        .onChange(of: magazineURLs.count) { newValue in
+            if newValue > 0 {
+                self.modelData.fetchAllMagazines()
+            }
+        }
     }
     
     @ViewBuilder
     private var latestTabView: some View {
         NavigationView {
             if magazines.isEmpty {
-                ProgressView()
+                VStack(spacing: 0) {
+                    Spacer()
+                    ProgressView()
+                    Spacer()
+                    self.tabBarView
+                }
             } else {
                 VStack(spacing: 0) {
                     List {
@@ -292,9 +320,7 @@ extension MagazineList {
         .onAppear {
             self.modelData.fetchLatestMagazineURLs(urlString: databaseURL)
             self.modelData.fetchLatestEposideMagazineURL(urlString: self.latestMagazineJSONURL)
-//            self.dailyArticleModelData.fetchLatestEposideMagazineURL(urlString: self.dailyArticlesJSONURL)
             self.modelData.fetchLatestMagazine()
-//            self.dailyArticleModelData.fetchLatestMagazine()
         }
         .onChange(of: magazineURLs.count) { newValue in
             if newValue > 0 {
@@ -304,13 +330,11 @@ extension MagazineList {
         .onChange(of: self.latestMagazineURL.count) { newValue in
             if newValue > 0 {
                 self.modelData.fetchLatestMagazine()
-//                self.dailyArticleModelData.fetchLatestMagazine()
             }
         }
         .onChange(of: self.latestMagazine.count) { newValue in
             if newValue > 0 {
                 self.modelData.fetchLatestArticles()
-//                self.dailyArticleModelData.fetchLatestArticles()
             }
         }
     }
