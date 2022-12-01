@@ -44,7 +44,7 @@ struct ArticlePeekView: View {
             
             HStack {
                 Text(self.currentArticle.title)
-                    .font(Font.custom("Georgia", size: 30))
+                    .font(Font.custom("Georgia", size: 25))
                     .multilineTextAlignment(.leading)
                     .foregroundColor(.defaultFontColor)
                 Spacer()
@@ -64,7 +64,8 @@ struct ArticlePeekView: View {
                 .foregroundColor(.gray)
         }
         .padding([.leading, .trailing])
-        .padding(.bottom)
+        .padding(.bottom, 3.5)
+        .padding(.top, 3.5)
     }
 }
 

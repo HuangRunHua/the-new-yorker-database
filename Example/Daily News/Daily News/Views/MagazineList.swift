@@ -55,7 +55,7 @@ struct MagazineList: View {
     private let thumbnailCornerRadius: CGFloat = 5
     
     enum Tab: Int {
-        case latest, magazine, daily
+        case latest, daily
     }
         
     @State private var selectedTab = Tab.daily
@@ -80,9 +80,6 @@ extension MagazineList {
                 if self.selectedTab == .latest {
                     self.latestTabView
                 }
-                else if self.selectedTab == .magazine {
-                    self.magazineTabView
-                }
                 else if self.selectedTab == .daily {
                     self.dailyArticles
                 }
@@ -98,12 +95,9 @@ extension MagazineList {
             
             HStack(spacing: 20) {
                 Spacer()
-                tabBarItem(.daily, title: "Latest", icon: "newspaper.fill")
+                tabBarItem(.daily, title: "Latest", icon: "list.dash")
                 Spacer()
-                tabBarItem(.latest, title: "Stories", icon: "list.dash")
-                
-                Spacer()
-                tabBarItem(.magazine, title: "Magazines", icon: "doc.plaintext.fill")
+                tabBarItem(.latest, title: "Stories", icon: "doc.plaintext.fill")
                 Spacer()
             }
             .padding(.top, 8)
@@ -150,6 +144,16 @@ extension MagazineList {
                         Spacer()
                         self.tabBarView
                     }
+                    .navigationTitle("")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            VStack(spacing: 0) {
+                                Text("Headlines")
+                                    .font(Font.custom("Georgia", size: 20))
+                            }
+                        }
+                    }
                     
                 } else {
                     VStack(spacing: 0) {
@@ -166,6 +170,11 @@ extension MagazineList {
                                 }
                             }
                             .padding(.bottom)
+                        }
+                        .refreshable {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                                self.dailyArticleModelData.fetchLatestMagazine()
+                            }
                         }
                         self.tabBarView
                     }
@@ -215,22 +224,16 @@ extension MagazineList {
     
     @ViewBuilder
     private var magazineTabView: some View {
-        NavigationView {
-            VStack(spacing: 0) {
-                ScrollView {
-                    Divider()
-                    self.magazineListRow
-                }
-                .navigationTitle("")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Text("Magazines")
-                            .font(Font.custom("Georgia", size: 20))
-                    }
-                }
-                
-                self.tabBarView
+        ScrollView {
+            Divider()
+            self.magazineListRow
+        }
+        .navigationTitle("")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Magazines")
+                    .font(Font.custom("Georgia", size: 20))
             }
         }
         .onAppear {
@@ -258,9 +261,11 @@ extension MagazineList {
                 VStack(spacing: 0) {
                     List {
                         VStack(alignment: .leading) {
-                            Text("Recent Issues".uppercased())
-                                .fontWeight(.bold)
-                                .padding([.leading, .top, .trailing])
+                            HStack {
+                                Text("Recent Issues".uppercased())
+                                    .fontWeight(.bold)
+                                    .padding([.leading, .top, .trailing])
+                            }
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(alignment: .bottom, spacing: 14) {
                                     ForEach(magazines.prefix(8), id: \.identityID) { magazine in
@@ -297,9 +302,18 @@ extension MagazineList {
                     .toolbar {
                         ToolbarItem(placement: .principal) {
                             VStack(spacing: 0) {
-                                Text("Headlines")
+                                Text("Weekly")
                                     .font(Font.custom("Georgia", size: 20))
                             }
+                        }
+
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            NavigationLink {
+                                self.magazineTabView
+                            } label: {
+                                Image(systemName: "doc.plaintext")
+                            }
+
                         }
                     }
                     .refreshable {

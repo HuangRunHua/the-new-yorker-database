@@ -271,17 +271,18 @@ extension ArticleView {
             }
             .frame(maxWidth: self.maxWidth)
         case .link:
-            if let resourcelink = content.link {
-                if let url = URL(string: resourcelink) {
-                    LinkView(previewURL: url)
-                        .aspectRatio(contentMode: .fit)
-                        .padding()
-                        .onTapGesture {
-                            self.selectedLink = url
-                            self.showLinkContent = true
-                        }
-                }
-            }
+            EmptyView()
+//            if let resourcelink = content.link {
+//                if let url = URL(string: resourcelink) {
+//                    LinkView(previewURL: url)
+//                        .aspectRatio(contentMode: .fit)
+//                        .padding()
+//                        .onTapGesture {
+//                            self.selectedLink = url
+//                            self.showLinkContent = true
+//                        }
+//                }
+//            }
         }
     }
     
