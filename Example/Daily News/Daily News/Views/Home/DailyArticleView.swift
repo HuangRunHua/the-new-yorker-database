@@ -150,11 +150,11 @@ struct DailyArticleView: View {
                 }
             }
         }
-        .sheet(isPresented: $showLinkContent) {
-            if let selectedLink = self.selectedLink {
-                SafariView(url: selectedLink)
-            }
-        }
+//        .sheet(isPresented: $showLinkContent) {
+//            if let selectedLink = self.selectedLink {
+//                SafariView(url: selectedLink)
+//            }
+//        }
     }
 }
 
@@ -269,12 +269,13 @@ extension DailyArticleView {
             if let resourcelink = content.link {
                 if let url = URL(string: resourcelink) {
                     LinkView(previewURL: url)
-                        .aspectRatio(contentMode: .fit)
-                        .padding()
-                        .onTapGesture {
-                            self.selectedLink = url
-                            self.showLinkContent = true
-                        }
+//                        .aspectRatio(contentMode: .fit)
+                        .padding([.leading, .trailing])
+//                        .padding()
+//                        .onTapGesture {
+//                            self.selectedLink = url
+//                            self.showLinkContent = true
+//                        }
                 }
             }
         }

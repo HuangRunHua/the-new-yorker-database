@@ -155,11 +155,11 @@ struct ArticleView: View {
                 }
             }
         }
-        .sheet(isPresented: $showLinkContent) {
-            if let selectedLink = self.selectedLink {
-                SafariView(url: selectedLink)
-            }
-        }
+//        .sheet(isPresented: $showLinkContent) {
+//            if let selectedLink = self.selectedLink {
+//                SafariView(url: selectedLink)
+//            }
+//        }
     }
 }
 
