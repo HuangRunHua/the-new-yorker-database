@@ -19,7 +19,7 @@ struct Content: Identifiable, Codable {
     var imageWidth: Double?
     var imageHeight: Double?
     var imageDescription: String?
-    var resourcelink: String?
+    var link: String?
     
     public enum Role: String {
         case quote = "quote"

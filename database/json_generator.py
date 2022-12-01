@@ -88,7 +88,7 @@ class MagazineGenerator(object):
                 parsed_content["text"] = content[3:]
             elif content[0:2] == "->":
                 parsed_content["role"] = "link"
-                parsed_content["text"] = content[2:]
+                parsed_content["link"] = content[2:]
             else:
                 parsed_content["role"] = "body"
                 parsed_content["text"] = content
