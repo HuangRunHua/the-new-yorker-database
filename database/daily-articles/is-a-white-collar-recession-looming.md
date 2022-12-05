@@ -3,7 +3,7 @@ title: Is a white-collar recession looming?
 subtitle: Don’t despair for the Patagonia-vest set just yet
 authorName: The Economist
 coverImageURL: https://github.com/HuangRunHua/the-new-yorker-database/raw/main/database/images/12.jpg
-coverImageDescription: 
+coverImageDescription:  
 hashTag: Business
 publishDate: December 4, 2022
 ---
