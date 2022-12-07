@@ -127,8 +127,8 @@ class MagazineGenerator(object):
 
 
 if __name__ == "__main__":
-    article_analyzer = MagazineGenerator(folder="2022-12-12")
-    # article_analyzer = MagazineGenerator(folder="daily-articles")
+    # article_analyzer = MagazineGenerator(folder="2022-12-12")
+    article_analyzer = MagazineGenerator(folder="daily-articles")
     # article_analyzer = MagazineGenerator(folder="2022-12-04")
     # article_analyzer = MagazineGenerator(folder="2022-11-22")
     # article_analyzer = MagazineGenerator(folder="2022-11-21")
