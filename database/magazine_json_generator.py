@@ -58,17 +58,17 @@ if __name__ == "__main__":
     """
     Daily articles update.
     """
-    # magazineJSON = MagazineJSON(folder="daily-articles")
-    # magazineJSON.generator_magazine_json(coverStory="“Off-Season,” by Jorge Colombo.",
-    #                                         date="December 4, 2022",
-    #                                         coverImageURL="https://media.newyorker.com/photos/637d0d8fce333787da27bbc6/master/w_760,c_limit/2022_12_05.jpg",
-    #                                         id="10000000-0000-0000-0000-000000000000")
+    magazineJSON = MagazineJSON(folder="daily-articles")
+    magazineJSON.generator_magazine_json(coverStory="“Off-Season,” by Jorge Colombo.",
+                                            date="December 4, 2022",
+                                            coverImageURL="https://media.newyorker.com/photos/637d0d8fce333787da27bbc6/master/w_760,c_limit/2022_12_05.jpg",
+                                            id="10000000-0000-0000-0000-000000000000")
 
-    magazineJSON = MagazineJSON(folder="2022-12-19")
-    magazineJSON.generator_magazine_json(coverStory="“Believe,” by George Booth.",
-                                            date="December 19, 2022",
-                                            coverImageURL="https://media.newyorker.com/photos/639262ce4d4403fc45f91be3/master/w_760,c_limit/2022_12_19.jpg",
-                                            id="00000000-0000-0000-0000-000000000012")
+    # magazineJSON = MagazineJSON(folder="2022-12-19")
+    # magazineJSON.generator_magazine_json(coverStory="“Believe,” by George Booth.",
+    #                                         date="December 19, 2022",
+    #                                         coverImageURL="https://media.newyorker.com/photos/639262ce4d4403fc45f91be3/master/w_760,c_limit/2022_12_19.jpg",
+    #                                         id="00000000-0000-0000-0000-000000000012")
 
 
     # magazineJSON = MagazineJSON(folder="2022-12-12")
