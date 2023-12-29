@@ -1,7 +1,6 @@
 
 
 import SwiftUI
-import LinkPreview
 
 struct DailyArticleView: View {
     
@@ -268,15 +267,6 @@ extension DailyArticleView {
             .frame(maxWidth: self.maxWidth)
         case .link:
             EmptyView()
-//            if let resourcelink = content.link {
-//                if let url = URL(string: resourcelink) {
-////                    LinkPreview(url: url)
-////                        .frame(height: 200)
-//                    LinkView(previewURL: url)
-////                        .aspectRatio(contentMode: .fit)
-//                        .padding([.leading, .trailing])
-//                }
-//            }
         }
     }
     

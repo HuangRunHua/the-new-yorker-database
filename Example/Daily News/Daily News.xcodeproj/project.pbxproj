@@ -26,7 +26,6 @@
 		A93DFF2728E1F5CF00FC5BAE /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DFF2628E1F5CF00FC5BAE /* Article.swift */; };
 		A93DFF2928E1F62A00FC5BAE /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DFF2828E1F62A00FC5BAE /* Contents.swift */; };
 		A93DFF2B28E1F6DD00FC5BAE /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DFF2A28E1F6DD00FC5BAE /* ModelData.swift */; };
-		A95169192938DB72008D1393 /* LinkPreview in Frameworks */ = {isa = PBXBuildFile; productRef = A95169182938DB72008D1393 /* LinkPreview */; };
 		A96A15EB29379A4A003BCDD5 /* ArticlePeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A15EA29379A4A003BCDD5 /* ArticlePeekView.swift */; };
 		A96A15ED2937A9F2003BCDD5 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A15EC2937A9F2003BCDD5 /* TestView.swift */; };
 		A96A15EF2937AA73003BCDD5 /* DailyArticleModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A15EE2937AA73003BCDD5 /* DailyArticleModelData.swift */; };
@@ -55,7 +54,6 @@
 		A93DFF2628E1F5CF00FC5BAE /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		A93DFF2828E1F62A00FC5BAE /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		A93DFF2A28E1F6DD00FC5BAE /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		A95169162938DB2B008D1393 /* LinkPreview-1.1.0 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "LinkPreview-1.1.0"; path = "../../../LinkPreview-1.1.0"; sourceTree = "<group>"; };
 		A96A15EA29379A4A003BCDD5 /* ArticlePeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePeekView.swift; sourceTree = "<group>"; };
 		A96A15EC2937A9F2003BCDD5 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		A96A15EE2937AA73003BCDD5 /* DailyArticleModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyArticleModelData.swift; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A95169192938DB72008D1393 /* LinkPreview in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +107,6 @@
 		A93DFF0828E1F59300FC5BAE = {
 			isa = PBXGroup;
 			children = (
-				A95169152938DB2B008D1393 /* Packages */,
 				A93DFF1328E1F59400FC5BAE /* Daily News */,
 				A93DFF1228E1F59400FC5BAE /* Products */,
 				A95169172938DB72008D1393 /* Frameworks */,
@@ -161,14 +157,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A95169152938DB2B008D1393 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				A95169162938DB2B008D1393 /* LinkPreview-1.1.0 */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		A95169172938DB72008D1393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +191,6 @@
 			);
 			name = "Daily News";
 			packageProductDependencies = (
-				A95169182938DB72008D1393 /* LinkPreview */,
 			);
 			productName = "Daily News";
 			productReference = A93DFF1128E1F59400FC5BAE /* Daily News.app */;
@@ -217,7 +204,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					A93DFF1028E1F59300FC5BAE = {
 						CreatedOnToolsVersion = 14.0;
@@ -325,6 +312,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -385,6 +373,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -434,15 +423,15 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Daily-News";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.noreply-newyorker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -479,15 +468,15 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Daily-News";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.noreply-newyorker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -513,13 +502,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A95169182938DB72008D1393 /* LinkPreview */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = LinkPreview;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A93DFF0928E1F59300FC5BAE /* Project object */;
 }
